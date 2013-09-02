@@ -4,7 +4,7 @@
 [heroku]
   account = resure
 [core]
-  editor = mvim
+  editor = vim
 [alias] co = checkout
   st = status -s
   l = log --graph --pretty=format':%C(yellow)%h%Cgreen%d%Creset %s %C(white) %an, %ar%Creset'
@@ -28,16 +28,14 @@
   whitespace = warn
 [format]
   pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
-
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   path = 
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
-[diff]
-  tool = mvimdiff
 [difftool]
   prompt = false
-[include]
-  path = /Users/resure/.gitconfig_local
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 956x723+7+313
+	main-window-view = FileView
+	history-view-vpane-position = 382
+	file-view-vpane-position = 642
