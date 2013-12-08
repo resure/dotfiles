@@ -1,0 +1,19 @@
+
+
+
+##############
+# Completion #
+##############
+
+# Loading functions
+fpath=(~/.zsh/functions $fpath)
+autoload -U ~/.zsh/functions/*(:t)
+autoload -U compinit
+compinit
+
+# Matches case insensitive for lowercase
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# Pasting with tabs doesn't perform completion
+zstyle ':completion:*' insert-tab pending
+zstyle ':completion:*' menu yes select

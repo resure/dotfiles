@@ -1,0 +1,11 @@
+[user]
+  name = Gadzhi Gadzhiev
+  email = gadzhi@gadzhiev.com
+[heroku]
+  account = resure
+[core]
+  editor = vim
+[alias] co = checkout
+  st = status -s
+  l = log --graph --pretty=format':%C(yellow)%h%Cgreen%d%Creset %s %C(white) %an, %ar%Creset'
+  lol = log --

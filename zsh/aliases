@@ -1,0 +1,71 @@
+
+
+
+###########
+# Aliases #
+###########
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+alias open='xdg-open'
+
+alias pu='pushd'
+alias po='popd'
+
+alias ..='cd ..'
+alias ...='cd ../../'
+
+alias history='fc -l 1'
+
+alias _='sudo'
+
+alias ls="ls -F"
+alias l="ls -lAh"
+alias ll="ls -l"
+alias la='ls -A'
+
+alias rb='ruby'
+
+alias r='rails'
+
+alias tlog='tail -f log/development.log'
+alias scaffold='script/generate nifty_scaffold'
+alias migrate='rake db:migrate db:test:clone'
+alias rst='touch tmp/restart.txt'
+alias exe='bundle exec'
+
+alias irc="TERM=screen-256color weechat-curses"
+alias tm="tmux attach || tmux new"
+alias fm="foreman"
+alias fml="foreman -f Procfile.local start"
+alias tlf="tail -f"
+alias e="$EDITOR"
+alias v="$VISUAL"
+alias b="bundle"
+
+alias z="zeus"
+
+
+#######
+# GIT #
+#######
+
+alias g='git'
+alias got='git'
+alias get='git'
+alias ga='git add'
+alias go='git checkout'
+alias gx='gitx --all'
+alias gcm='git commit -m'
+alias gcma='git commit -am'
+alias gl='git pull'
+alias gp='git push'
+alias gd='git diff'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gco='git checkout'
+alias gb='git branch'
+alias gs='git status'
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
+
