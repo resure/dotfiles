@@ -52,6 +52,7 @@ Bundle 'vim-scripts/guicolorscheme.vim'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'tpope/vim-dispatch'
 Bundle 'thoughtbot/vim-rspec'
+Bundle 'wting/rust.vim'
 
 filetype plugin indent on         " Required for Vundle
 syntax enable
