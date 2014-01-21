@@ -5,7 +5,15 @@
   account = resure
 [core]
   editor = vim
+  excludesfile = ~/.gitignore_global
+  autocrlf = input
 [alias] co = checkout
   st = status -s
   l = log --graph --pretty=format':%C(yellow)%h%Cgreen%d%Creset %s %C(white) %an, %ar%Creset'
   lol = log --
+  unstage = reset HEAD --
+  last = log -1 HEAD
+[merge]
+  tool = vimdiff
+[push]
+  default = simple
