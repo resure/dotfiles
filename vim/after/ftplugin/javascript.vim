@@ -1,6 +1,6 @@
 setlocal expandtab
-setlocal shiftwidth=6
-setlocal softtabstop=6
+setlocal shiftwidth=2
+setlocal softtabstop=2
 map <leader>r :!clear && node %<CR>
 map <leader>h :!clear && jshint %<CR>
 

@@ -51,9 +51,12 @@ Bundle 'csexton/jekyll.vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'wting/rust.vim'
 
-Bundle 'flazz/vim-colorschemes'
+" Bundle 'vim-scripts/guicolorscheme.vim'
+" Bundle 'flazz/vim-colorschemes'
 Bundle 'sjl/badwolf'
 Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'dhruvasagar/vim-railscasts-theme'
+Bundle 'tomasr/molokai'
 
 filetype plugin indent on         " Required for Vundle
 syntax enable
@@ -192,7 +195,7 @@ set guioptions-=b " no scrollbar on the bottom
 set guioptions=aiA
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
-set gfn=Ubuntu\ Mono\ derivative\ Powerline\ 13
+set gfn=Droid\ Sans\ Mono\ for\ Powerline\ 11
 
 " Russian key maps
 source ~/.vim/russian
@@ -213,6 +216,7 @@ let g:airline#extensions#tabline#buffer_min_count = 1
 " Switch between color schemes
 map <leader>t1 :!echo 'color Tomorrow'>~/.vim/current_color<CR>:color Tomorrow<CR>
 map <leader>t2 :!echo 'color Tomorrow-Night'>~/.vim/current_color<CR>:color Tomorrow-Night<CR>
+map <leader>t3 :!echo 'color Tomorrow-Night-Bright'>~/.vim/current_color<CR>:color Tomorrow-Night-Bright<CR>
 
 " gist-vim
 let g:gist_open_browser_after_post = 1
