@@ -13,6 +13,8 @@ Additional steps for Vim:
 1. Create ~/.vimrc file with `source ~/.vim/vimrc` content
 2. Create directories for swap and backup files:
 `mkdir ~/.vim/{_backup,_temp}`
-3. Fetch packages:
+3. Install Vundle: `git clone https://github.com/gmarik/vundle.git
+   ~/.vim/bundle/vundle`
+4. Fetch packages:
 `vim +BundleInstall +qall`
 
