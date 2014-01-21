@@ -34,7 +34,6 @@ PS1="%n@%m:%~%# "
 # Setup the prompt with pretty colors
 setopt prompt_subst
 
-
 # PROMPT='
 # %{$fg_bold[gray]%}%~%{$fg_bold[blue]%}%{$fg_bold[blue]%}% %{$reset_color%} %{$fg[green]%}\$%{$reset_color%  '
 
@@ -56,7 +55,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN="] %{$fg[green]%}✔%{$reset_color%}"
 
 
 # Powerline
-if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-  source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
-fi
+# if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+#   source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+# fi
 

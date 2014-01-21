@@ -1,12 +1,13 @@
-
-1. Install Powerline
-   (http://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin, system-wide installation so you should fix powerline path in tmux and zsh configs if you want to use per-user method)
-2. Link config files to your home directory (example: `ln -s
+Clone repository and link config files to your home directory (example: `ln -s
    ~/dotfiles/tmux.conf ~/.tmux.conf`)
+
+Don't forget to change credentials in gitconfig.
 
 Additional steps for Zsh:
 
 1. Create ~/.zshrc file with `source "{THIS_REPO_PATH}/zsh/zshrc"` content
+2. Add `PS1="%n@%m:%~%# "` to your ~/.zshrc if you want to remove username and hostname from the prompt
+
 
 Additional steps for Vim:
 
@@ -17,4 +18,6 @@ Additional steps for Vim:
    ~/.vim/bundle/vundle`
 4. Fetch packages:
 `vim +BundleInstall +qall`
+5. Install Ack,  `sudo apt-get install
+   ack-grep' on Debian/Ubuntu, `brew install ack` on OS X
 

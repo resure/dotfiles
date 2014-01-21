@@ -19,3 +19,5 @@
   default = simple
 [color]
   ui = auto
+[github]
+  user = resure
