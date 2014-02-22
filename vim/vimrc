@@ -15,9 +15,9 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'slack/vim-bufexplorer'
 Bundle 'kien/ctrlp.vim'
 
-Bundle 'scrooloose/syntastic'
+" Bundle 'scrooloose/syntastic'
 Bundle 'ctags.vim'
-Bundle 'airblade/vim-gitgutter'
+" Bundle 'airblade/vim-gitgutter'
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-eunuch'
