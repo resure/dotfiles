@@ -15,8 +15,6 @@
   last = log -1 HEAD
 [merge]
   tool = vimdiff
-[push]
-  default = simple
 [color]
   ui = auto
 [github]
