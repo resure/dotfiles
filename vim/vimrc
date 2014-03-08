@@ -15,9 +15,9 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'slack/vim-bufexplorer'
 Bundle 'kien/ctrlp.vim'
 
-Bundle 'scrooloose/syntastic'
+" Bundle 'scrooloose/syntastic'
 Bundle 'ctags.vim'
-Bundle 'airblade/vim-gitgutter'
+" Bundle 'airblade/vim-gitgutter'
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-eunuch'
@@ -33,17 +33,19 @@ Bundle "honza/vim-snippets"
 
 Bundle 'tpope/vim-dispatch'
 
-Bundle 'bling/vim-airline'
-Bundle 'edkolev/tmuxline.vim'
+" Bundle 'bling/vim-airline'
+" Bundle 'edkolev/tmuxline.vim'
 
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-markdown'
+" Bundle 'tpope/vim-markdown'
+Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-git'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'mintplant/vim-literate-coffeescript'
 Bundle 'sickill/vim-pasta'
 Bundle 'slim-template/vim-slim'
 Bundle 'wlangstroth/vim-haskell'
@@ -51,12 +53,14 @@ Bundle 'pangloss/vim-erlang'
 Bundle 'csexton/jekyll.vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'wting/rust.vim'
+Bundle 'mustache/vim-mustache-handlebars'
 
 " Bundle 'vim-scripts/guicolorscheme.vim'
-" Bundle 'flazz/vim-colorschemes'
+Bundle 'flazz/vim-colorschemes'
 Bundle 'sjl/badwolf'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'dhruvasagar/vim-railscasts-theme'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'tomasr/molokai'
 
 filetype plugin indent on         " Required for Vundle
@@ -97,7 +101,7 @@ set ttyfast                       " Indicates a fast terminal connection.
 set ruler                         " Show the current line and column number.
 set number                        " Show line numbers.
 
-set laststatus=2                  " Show the status line all the time.
+" set laststatus=2                  " Show the status line all the time.
 
 set ignorecase                    " Case-sensitive search.
 set smartcase
@@ -114,7 +118,7 @@ set hlsearch
 "set formatoptions=qrn1
 "set colorcolumn=85
 
-set list                          " Better invisible characters.
+" set list                          " Better invisible characters.
 set listchars=tab:▸\ ,eol:¬
 
 set mouse=a                       " Some stuff to get the mouse going in term.
@@ -128,6 +132,12 @@ set wildmode=list:longest,full
 
 let mapleader = ","               " Setup leader key.
 
+" Switch invisible characters
+map <leader>i :set list!<CR>
+
+" Delete all trailing whitespacces
+map <leader>u :%s/\s\+$//<CR>
+
 " Easier commands
 nnoremap ; :
 vnoremap ; :
@@ -136,7 +146,7 @@ vnoremap ; :
 nnoremap / /\v
 vnoremap / /\v
 
-nnoremap <leader>a :Ack 
+nnoremap <leader>a :Ack
 
 " Re-hardwrap paragraphs of text
 nnoremap <leader>q gqip
@@ -166,14 +176,14 @@ nnoremap <leader>e :BufExplorer<cr>
 
 " Tab mappings
 map <leader>tt :tabnew<CR>
-map <leader>te :tabedit 
+map <leader>te :tabedit
 map <leader>tc :tabclose<CR>
 map <leader>to :tabonly<CR>
 map <leader>tn :tabnext<CR>
 map <leader>tp :tabprevious<CR>
 map <leader>tf :tabfirst<CR>
 map <leader>tl :tablast<CR>
-map <leader>tm :tabmove 
+map <leader>tm :tabmove
 
 " vim-gitgutter
 map <leader>tg :GitGutterToggle<CR>
@@ -196,31 +206,27 @@ set guioptions-=b " no scrollbar on the bottom
 set guioptions=aiA
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
-set gfn=Droid\ Sans\ Mono\ for\ Powerline\ 11
+set gfn=DejaVu\ Sans\ Mono\ 11
 
 " Russian key maps
 source ~/.vim/russian
 
-" Default color scheme
-source ~/.vim/current_color
-
 " Fast switch between two last files
 nnoremap <leader><leader> <c-^>
-
-" Statusline config
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#tab_min_count = 1
-let g:airline#extensions#tabline#buffer_min_count = 1
-
-" Switch between color schemes
-map <leader>t1 :!echo 'color Tomorrow'>~/.vim/current_color<CR>:color Tomorrow<CR>
-map <leader>t2 :!echo 'color Tomorrow-Night'>~/.vim/current_color<CR>:color Tomorrow-Night<CR>
-map <leader>t3 :!echo 'color Tomorrow-Night-Bright'>~/.vim/current_color<CR>:color Tomorrow-Night-Bright<CR>
 
 " gist-vim
 let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
 let g:gist_detect_filetype = 1
+
+" mustache
+let g:mustache_abbreviations = 1
+
+" literate coffeescript
+autocmd FileType litcoffee runtime ftplugin/coffee.vim
+
+" turn off default mode indicator
+" set noshowmode
+
+set ruf=%32(%l\ %c\ [%Y/%{&ff}/%{strlen(&fenc)?&fenc:'none'}]\ %p%%%)
 
