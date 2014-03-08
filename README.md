@@ -5,8 +5,7 @@ Don't forget to change credentials in gitconfig.
 
 Additional steps for Zsh:
 
-1. Create ~/.zshrc file with `source "{THIS_REPO_PATH}/zsh/zshrc"` content
-2. Add `PS1="%n@%m:%~%# "` to your ~/.zshrc if you want to remove username and hostname from the prompt
+1. Install Oh My Zsh: `curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh`
 
 
 Additional steps for Vim:
