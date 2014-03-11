@@ -36,6 +36,8 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias open='xdg-open'
 
+export TERM="xterm-256color"
+
 function mvim() {
   /usr/bin/gvim "$@" > /dev/null 2>&1 &;
 }
