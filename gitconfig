@@ -19,3 +19,5 @@
   ui = auto
 [github]
   user = resure
+[push]
+  default = simple
