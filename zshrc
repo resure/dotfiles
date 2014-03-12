@@ -86,10 +86,11 @@ pk () {
 export rvmsudo_secure_path=1
 if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
   source "$HOME/.rvm/scripts/rvm"
+  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 elif [[ -s "/usr/local/rvm/scripts/rvm" ]] ; then
   source "/usr/local/rvm/scripts/rvm"
+  PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
 else
   printf "ERROR: An RVM installation was not found.\n"
 fi
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
