@@ -56,7 +56,7 @@ Bundle 'wting/rust.vim'
 Bundle 'mustache/vim-mustache-handlebars'
 
 " Bundle 'vim-scripts/guicolorscheme.vim'
-" Bundle 'flazz/vim-colorschemes'
+Bundle 'flazz/vim-colorschemes'
 Bundle 'sjl/badwolf'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'dhruvasagar/vim-railscasts-theme'
@@ -227,6 +227,9 @@ let g:mustache_abbreviations = 1
 
 " literate coffeescript
 autocmd FileType litcoffee runtime ftplugin/coffee.vim
+
+" custom syntax highlighting
+au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
 
 " turn off default mode indicator
 " set noshowmode
