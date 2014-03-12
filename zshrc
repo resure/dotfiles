@@ -14,10 +14,6 @@ username=`whoami`
 export PATH="/usr/local/heroku/bin:/home/$username/.bin:/usr/local/bin:/home/$username/bin:/home/$username/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
-# RVM
-PATH=$PATH:$HOME/.rvm/bin
-source ~/.rvm/scripts/rvm
-
 # this for tmuxinator plugin
 alias mux=tmuxinator
 
@@ -86,4 +82,8 @@ pk () {
 
 }
 
+# RVM
+source ~/.rvm/scripts/rvm
+PATH=$PATH:$HOME/.rvm/bin
+export rvmsudo_secure_path=1
 
