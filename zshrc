@@ -14,10 +14,6 @@ username=`whoami`
 export PATH="/usr/local/heroku/bin:/home/$username/.bin:/usr/local/bin:/home/$username/bin:/home/$username/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
-# RVM
-PATH=$PATH:$HOME/.rvm/bin
-source ~/.rvm/scripts/rvm
-
 # this for tmuxinator plugin
 alias mux=tmuxinator
 
@@ -86,4 +82,14 @@ pk () {
 
 }
 
+# RVM
+export rvmsudo_secure_path=1
+if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
+  source "$HOME/.rvm/scripts/rvm"
+elif [[ -s "/usr/local/rvm/scripts/rvm" ]] ; then
+  source "/usr/local/rvm/scripts/rvm"
+else
+  printf "ERROR: An RVM installation was not found.\n"
+fi
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
