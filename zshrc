@@ -82,7 +82,7 @@ pk () {
 
 }
 
-if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
+if [[ -s "$HOME/.zlocal" ]] ; then
   source "$HOME/.zlocal"
 fi
 
