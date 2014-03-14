@@ -1,8 +1,8 @@
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="gentoo"
+ZSH_THEME="jreese"
 
-DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATe="true"
 HIST_STAMPS="mm/dd"
 
 plugins=(git bundler common-aliases debian docker encode64 gem gitfast github lol node npm pip python rails redis-cli ruby ssh-agent tmux tmuxinator vagrant rvm)
