@@ -5,13 +5,13 @@ ZSH_THEME="jreese"
 DISABLE_AUTO_UPDATe="true"
 HIST_STAMPS="mm/dd"
 
-plugins=(git bundler common-aliases debian docker encode64 gem gitfast github lol node npm pip python rails redis-cli ruby ssh-agent tmux tmuxinator vagrant rvm)
+plugins=(git bundler debian docker encode64 gem gitfast github lol node npm pip python rails redis-cli ruby ssh-agent tmux tmuxinator vagrant rvm)
 
 source $ZSH/oh-my-zsh.sh
 
 username=`whoami`
 
-export PATH="/usr/local/heroku/bin:/home/$username/.bin:/usr/local/bin:/home/$username/bin:/home/$username/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
+export PATH="$PATH:/usr/local/heroku/bin:/home/$username/.bin:/usr/local/bin:/home/$username/bin:/home/$username/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export MANPATH="/usr/local/man:$MANPATH"
 
 # this for tmuxinator plugin
