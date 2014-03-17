@@ -54,6 +54,7 @@ Bundle 'csexton/jekyll.vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'wting/rust.vim'
 Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'jnwhiteh/vim-golang'
 
 " Bundle 'vim-scripts/guicolorscheme.vim'
 " Bundle 'flazz/vim-colorschemes'
