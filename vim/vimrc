@@ -56,7 +56,8 @@ Bundle 'wting/rust.vim'
 Bundle 'mustache/vim-mustache-handlebars'
 
 " Bundle 'vim-scripts/guicolorscheme.vim'
-Bundle 'flazz/vim-colorschemes'
+" Bundle 'flazz/vim-colorschemes'
+Bundle "daylerees/colour-schemes", { "rtp": "vim/" }
 Bundle 'sjl/badwolf'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'dhruvasagar/vim-railscasts-theme'
@@ -209,7 +210,7 @@ set guioptions-=b " no scrollbar on the bottom
 set guioptions=aiA
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
-set gfn=DejaVu\ Sans\ Mono\ 11
+set gfn=Droid\ Sans\ Mono\ for\ Powerline\ 11
 
 " Russian key maps
 source ~/.vim/russian
