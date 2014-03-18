@@ -1,6 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="jreese"
+ZSH_THEME="gentoo"
 
 DISABLE_AUTO_UPDATe="true"
 HIST_STAMPS="mm/dd"
