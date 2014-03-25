@@ -33,8 +33,8 @@ Bundle "honza/vim-snippets"
 
 Bundle 'tpope/vim-dispatch'
 
-Bundle 'bling/vim-airline'
-Bundle 'edkolev/tmuxline.vim'
+" Bundle 'bling/vim-airline'
+" Bundle 'edkolev/tmuxline.vim'
 
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-rails'
@@ -234,7 +234,7 @@ autocmd FileType litcoffee runtime ftplugin/coffee.vim
 au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
 
 " turn off default mode indicator
-set noshowmode
+" set noshowmode
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
@@ -248,5 +248,5 @@ let g:airline#extensions#tabline#tab_nr_type = 0
 let g:vim_markdown_folding_disabled=1
 
 " Line under the status line
-" set ruf=%32(%l\ %c\ [%Y/%{&ff}/%{strlen(&fenc)?&fenc:'none'}]\ %p%%%)
+set ruf=%32(%l\ %c\ [%Y/%{&ff}/%{strlen(&fenc)?&fenc:'none'}]\ %p%%%)
 

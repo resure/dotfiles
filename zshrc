@@ -1,6 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="gentoo"
+ZSH_THEME="robbyrussell"
 
 DISABLE_AUTO_UPDATe="true"
 HIST_STAMPS="mm/dd"
@@ -13,6 +13,8 @@ username=`whoami`
 
 export PATH="$PATH:/usr/local/heroku/bin:/home/$username/.bin:/usr/local/bin:/home/$username/bin:/home/$username/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export MANPATH="/usr/local/man:$MANPATH"
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
 
 # this for tmuxinator plugin
 alias mux=tmuxinator
