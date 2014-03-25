@@ -1,0 +1,60 @@
+[
+	{ "keys": ["j", "j"], "command": "exit_insert_mode",
+    "context":
+    [
+      { "key": "setting.command_mode", "operand": false },
+      { "key": "setting.is_widget", "operand": false }
+    ]
+  },
+
+  { "keys": ["ctrl+\\"], "command": "toggle_comment", "args": { "block": false } },
+  { "keys": ["ctrl+shift+\\"], "command": "toggle_comment", "args": { "block": true } },
+
+  { "keys": [",", "w"], "command": "destroy_pane", "args": {"direction": "self"}},
+  { "keys": ["alt+w"], "command": "destroy_pane", "args": {"direction": "self"}},
+
+  {
+    "keys": [",", "l"],
+    "command": "set_layout",
+    "args":
+    {
+      "cols": [0.0, 1.0],
+      "rows": [0.0, 1.0],
+      "cells": [[0, 0, 1, 1]]
+    },
+    "context":
+    [
+      { "key": "setting.command_mode", "operand": true },
+    ]
+  },
+
+  {
+    "keys": [",", "g"],
+    "command": "create_pane_with_file", "args": {"direction": "left"},
+    "context":
+    [
+      { "key": "setting.command_mode", "operand": true },
+    ]
+  },
+
+  {
+    "keys": [",", "s"],
+    "command": "create_pane_with_file", "args": {"direction": "up"},
+    "context":
+    [
+      { "key": "setting.command_mode", "operand": true },
+    ]
+  },
+
+  { "keys": ["alt+g"], "command": "create_pane_with_file", "args": {"direction": "left"} },
+  { "keys": ["alt+s"], "command": "create_pane_with_file", "args": {"direction": "up"} },
+
+  { "keys": ["ctrl+l"], "command": "travel_to_pane", "args": {"direction": "right"} },
+  { "keys": ["ctrl+h"], "command": "travel_to_pane", "args": {"direction": "left"} },
+  { "keys": ["alt+j"], "command": "travel_to_pane", "args": {"direction": "down"} },
+  { "keys": ["alt+k"], "command": "travel_to_pane", "args": {"direction": "up"} },
+
+  { "keys": ["ctrl+k", "ctrl+o"], "command": "toggle_vintage", "context": [{"key": "panel_visible", "operand": false}] },
+  { "keys": ["alt+l"], "command": "expand_selection", "args": {"to": "line"} },
+  { "keys": ["alt+h"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+]
