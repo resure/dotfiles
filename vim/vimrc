@@ -239,10 +239,7 @@ au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru
 " airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#left_sep = "\ue0b0"
-let g:airline#extensions#tabline#buffer_min_count = 2
 let g:airline#extensions#tabline#tab_min_count = 1
-let g:airline#extensions#tabline#tab_nr_type = 0
 
 " disable markdown folding
 let g:vim_markdown_folding_disabled=1
