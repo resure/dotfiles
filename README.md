@@ -20,3 +20,10 @@ Additional steps for Vim:
 5. Install Ack,  `sudo apt-get install
    ack-grep' on Debian/Ubuntu, `brew install ack` on OS X
 
+
+Additional steps for SublimeText:
+
+1. Install SublimeText package control system (https://sublime.wbond.net/installation)
+2. Backup your current User folder: `mv ~/.config/sublime-text-3/Packages/User ~/.config/sublime-text-3/Packages/User_backup`
+3. Link configuration: `ln -s ~/path/to/dotfiles/sublime ~/.config/sublime-text-3/Packages/User`
+
