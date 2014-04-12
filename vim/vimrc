@@ -12,7 +12,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
-Bundle 'slack/vim-bufexplorer'
+Bundle 'jlanzarotta/bufexplorer'
 Bundle 'kien/ctrlp.vim'
 
 " Bundle 'scrooloose/syntastic'
@@ -33,8 +33,8 @@ Bundle "honza/vim-snippets"
 
 Bundle 'tpope/vim-dispatch'
 
-" Bundle 'bling/vim-airline'
-" Bundle 'edkolev/tmuxline.vim'
+Bundle 'bling/vim-airline'
+Bundle 'edkolev/tmuxline.vim'
 
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-rails'
@@ -55,6 +55,7 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'wting/rust.vim'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'jnwhiteh/vim-golang'
+Bundle 'maksimr/vim-yate'
 
 " Bundle 'vim-scripts/guicolorscheme.vim'
 " Bundle 'flazz/vim-colorschemes'
@@ -237,9 +238,9 @@ au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru
 " set noshowmode
 
 " airline
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#tab_min_count = 1
+" let g:airline#extensions#tabline#tab_min_count = 1
 
 " disable markdown folding
 let g:vim_markdown_folding_disabled=1

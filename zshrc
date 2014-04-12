@@ -2,10 +2,10 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-DISABLE_AUTO_UPDATe="true"
+DISABLE_AUTO_UPDATE="true"
 HIST_STAMPS="mm/dd"
 
-plugins=(git bundler debian docker encode64 gem gitfast github lol node npm pip python rails redis-cli ruby ssh-agent tmux tmuxinator vagrant rvm)
+plugins=(git bundler debian docker encode64 gem gitfast github lol node npm pip python rails redis-cli ruby tmux tmuxinator vagrant rvm)
 
 source $ZSH/oh-my-zsh.sh
 
