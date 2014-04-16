@@ -1,0 +1,4 @@
+{
+    "cmd": ["yate", "$file_name", "--output", "$file_base_name.js"],
+    "selector": "source.yate"
+}
