@@ -11,7 +11,7 @@ sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y dist-upgrade
-sudo apt-get install build-essential curl erlang haskell-platform golang emacs vim vim-gtk git zsh tmux redis-server ack-grep mongodb-10gen postgresql-common postgresql-contrib ipython ipython-qtconsole ipython3 ipython3-qtconsole python-pip python3-pip oracle-java8-installer gnome-tweak-tool unity-tweak-tool fonts-droid fonts-dejavu virtualbox
+sudo apt-get install build-essential curl erlang haskell-platform golang emacs vim vim-gtk git zsh tmux redis-server ack-grep mongodb-10gen postgresql-common postgresql-contrib ipython ipython-qtconsole ipython3 ipython3-qtconsole python-pip python3-pip oracle-java8-installer gnome-tweak-tool unity-tweak-tool fonts-droid fonts-dejavu virtualbox xclip
 
 if [ ! -z "$LAPTOP" ]
 then
