@@ -5,44 +5,22 @@ ZSH_THEME="robbyrussell"
 DISABLE_AUTO_UPDATE="true"
 HIST_STAMPS="mm/dd"
 
-plugins=(git bundler debian docker encode64 gem gitfast github lol node npm pip python rails redis-cli ruby tmux tmuxinator vagrant rvm)
+plugins=(git bundler debian docker node npm pip python rails redis-cli ruby tmux tmuxinator vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
 username=`whoami`
 
-export PATH="$PATH:/usr/local/heroku/bin:/home/$username/.bin:/usr/local/bin:/home/$username/bin:/home/$username/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-export MANPATH="/usr/local/man:$MANPATH"
-export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH/bin"
-
 # this for tmuxinator plugin
 alias mux=tmuxinator
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='vim'
-fi
-
-# Compilation flags
-export ARCHFLAGS="-arch x86_64"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 alias irc="TERM=screen-256color weechat-curses"
 alias tm="tmux attach || tmux new"
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
-alias open='xdg-open'
 
 export TERM="xterm-256color"
-
-function mvim() {
-  /usr/bin/gvim "$@" > /dev/null 2>&1 &;
-}
 
 extract () {
  if [ -f $1 ] ; then
