@@ -33,7 +33,7 @@ Bundle "honza/vim-snippets"
 
 Bundle 'tpope/vim-dispatch'
 
-Bundle 'bling/vim-airline'
+" Bundle 'bling/vim-airline'
 Bundle 'edkolev/tmuxline.vim'
 
 Bundle 'tpope/vim-bundler'
@@ -239,7 +239,7 @@ au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru
 
 " airline
 " let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 0
 " let g:airline#extensions#tabline#tab_min_count = 1
 
 " disable markdown folding
