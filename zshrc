@@ -70,6 +70,20 @@ fi
 ZSH_THEME_GIT_PROMPT_PREFIX="["
 ZSH_THEME_GIT_PROMPT_SUFFIX="]"
 
+watch_blocks() {
+    ./node_modules/nodemon/bin/nodemon.js \
+            -e js,yate,css \
+            --watch desktop.blocks/ \
+            --exec "make"
+}
+
+watch_bundle() {
+    ./node_modules/nodemon/bin/nodemon.js\
+            -e js,yate,css\
+            --watch "desktop.blocks/$1/"\
+            --exec "./node_modules/.bin/enb make desktop.bundles/$1 -n"
+}
+
 if [[ -s "$HOME/.zlocal" ]] ; then
   source "$HOME/.zlocal"
 fi
