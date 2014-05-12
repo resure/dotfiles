@@ -84,6 +84,14 @@ watch_bundle() {
             --exec "./node_modules/.bin/enb make desktop.bundles/$1 -n"
 }
 
+clck() {
+  wget -qO- "http://clck.ru/--?url=$1"\ | pbcopy
+}
+
+nda() {
+  wget -qO- "http://$nda_clck/--?url=$1"\ | pbcopy
+}
+
 if [[ -s "$HOME/.zlocal" ]] ; then
   source "$HOME/.zlocal"
 fi
