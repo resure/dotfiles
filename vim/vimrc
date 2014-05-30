@@ -191,6 +191,8 @@ map <leader>tf :tabfirst<CR>
 map <leader>tl :tablast<CR>
 map <leader>tm :tabmove
 
+map <leader>m :set nu!<CR>:set paste!<CR>:set list!<CR>
+
 " vim-gitgutter
 map <leader>tg :GitGutterToggle<CR>
 " let g:gitgutter_enabled = 0
