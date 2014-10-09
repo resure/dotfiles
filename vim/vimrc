@@ -33,8 +33,8 @@ Bundle "honza/vim-snippets"
 
 Bundle 'tpope/vim-dispatch'
 
-Bundle 'bling/vim-airline'
-Bundle 'edkolev/tmuxline.vim'
+" Bundle 'bling/vim-airline'
+" Bundle 'edkolev/tmuxline.vim'
 
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-rails'
@@ -71,7 +71,7 @@ syntax enable
 
 set nowrap                        " Don't wrap lines
 set scrolloff=7                   " Show 3 lines of context around the cursor.
-set tabstop=2 shiftwidth=2        " A tab is two spaces
+set tabstop=4 shiftwidth=4        " A tab is two spaces
 set expandtab                     " Use spaces, not tabs
 set backspace=indent,eol,start    " Backspace through everything in insert mode
 

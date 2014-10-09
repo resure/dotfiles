@@ -5,7 +5,7 @@ ZSH_THEME=""
 DISABLE_AUTO_UPDATE="true"
 HIST_STAMPS="mm/dd"
 
-plugins=(git node npm vagrant)
+plugins=(git node npm vagrant ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -74,7 +74,7 @@ watch_blocks() {
   ./node_modules/nodemon/bin/nodemon.js \
     -e js,yate,css \
     --watch desktop.blocks/ \
-    --exec "make"
+    --exec "./node_modules/.bin/enb make -n"
 }
 
 watch_bundle() {
