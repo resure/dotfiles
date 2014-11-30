@@ -6,66 +6,75 @@ set nocompatible
 
 filetype off
 set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'mileszs/ack.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'jlanzarotta/bufexplorer'
-Bundle 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jlanzarotta/bufexplorer'
+" Plugin 'kien/ctrlp.vim'
+Plugin 'Shougo/unite.vim'
 
-" Bundle 'scrooloose/syntastic'
-Bundle 'ctags.vim'
-" Bundle 'airblade/vim-gitgutter'
+" Plugin 'scrooloose/syntastic'
+Plugin 'ctags.vim'
+" Plugin 'airblade/vim-gitgutter'
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-eunuch'
-Bundle 'mattn/gist-vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-eunuch'
+Plugin 'mattn/gist-vim'
 
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'mattn/emmet-vim'
 
-Bundle 'tpope/vim-dispatch'
+Plugin 'tpope/vim-dispatch'
 
-" Bundle 'bling/vim-airline'
-" Bundle 'edkolev/tmuxline.vim'
+Plugin 'bling/vim-airline'
+Plugin 'edkolev/tmuxline.vim'
 
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-rails'
-" Bundle 'tpope/vim-markdown'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-git'
-Bundle 'leafgarland/typescript-vim'
-Bundle 'groenewege/vim-less'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'mintplant/vim-literate-coffeescript'
-Bundle 'sickill/vim-pasta'
-Bundle 'slim-template/vim-slim'
-Bundle 'wlangstroth/vim-haskell'
-Bundle 'pangloss/vim-erlang'
-Bundle 'csexton/jekyll.vim'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'wting/rust.vim'
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'maksimr/vim-yate'
+Plugin 'jceb/vim-orgmode'
 
-" Bundle 'vim-scripts/guicolorscheme.vim'
-" Bundle 'flazz/vim-colorschemes'
-Bundle "daylerees/colour-schemes", { "rtp": "vim/" }
-Bundle 'sjl/badwolf'
-Bundle 'chriskempson/vim-tomorrow-theme'
-Bundle 'dhruvasagar/vim-railscasts-theme'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tomasr/molokai'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
 
+" Plugin 'tpope/vim-bundler'
+" Plugin 'tpope/vim-rails'
+Plugin 'plasticboy/vim-markdown'
+" Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-git'
+Plugin 'leafgarland/typescript-vim'
+" Plugin 'groenewege/vim-less'
+" Plugin 'kchmck/vim-coffee-script'
+" Plugin 'mintplant/vim-literate-coffeescript'
+" Plugin 'sickill/vim-pasta'
+" Plugin 'slim-template/vim-slim'
+" Plugin 'wlangstroth/vim-haskell'
+" Plugin 'pangloss/vim-erlang'
+Plugin 'csexton/jekyll.vim'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'wting/rust.vim'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'maksimr/vim-yate'
+Plugin 'wavded/vim-stylus'
+
+" Plugin 'vim-scripts/guicolorscheme.vim'
+" Plugin 'flazz/vim-colorschemes'
+Plugin 'daylerees/colour-schemes', { 'rtp': 'vim/' }
+Plugin 'sjl/badwolf'
+Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'dhruvasagar/vim-railscasts-theme'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+
+call vundle#end()
 filetype plugin indent on         " Required for Vundle
 syntax enable
 
@@ -198,7 +207,7 @@ map <leader>tg :GitGutterToggle<CR>
 " let g:gitgutter_enabled = 0
 
 " ctrlp.vim
-map <leader>f :CtrlPMixed<CR>
+" map <leader>f :CtrlPMixed<CR>
 
 " Clear out a search
 nnoremap <leader><space> :noh<cr>
