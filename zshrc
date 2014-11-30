@@ -5,7 +5,7 @@ ZSH_THEME=""
 DISABLE_AUTO_UPDATE="true"
 HIST_STAMPS="mm/dd"
 
-plugins=(git node npm vagrant django virtualenv)
+plugins=(git node npm vagrant ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -14,6 +14,7 @@ alias tm="tmux attach || tmux new"
 alias fuck='sudo $(history -p \!\!)' 
 alias 'bemblock'='bem create -l desktop.blocks -b'
 alias 'bempage'='bem create -l desktop.bundles -b'
+alias gdfc="git diff --word-diff=color"
 
 extract () {
  if [ -f $1 ] ; then
@@ -77,7 +78,7 @@ watch_blocks() {
   ./node_modules/nodemon/bin/nodemon.js \
     -e js,yate,css \
     --watch desktop.blocks/ \
-    --exec "make"
+    --exec "./node_modules/.bin/enb make -n"
 }
 
 watch_bundle() {
