@@ -33,8 +33,8 @@ Bundle "honza/vim-snippets"
 
 Bundle 'tpope/vim-dispatch'
 
-Bundle 'bling/vim-airline'
-Bundle 'edkolev/tmuxline.vim'
+" Bundle 'bling/vim-airline'
+" Bundle 'edkolev/tmuxline.vim'
 
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-rails'
@@ -54,7 +54,7 @@ Bundle 'csexton/jekyll.vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'wting/rust.vim'
 Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'jnwhiteh/vim-golang'
+Bundle 'fatih/vim-go'
 Bundle 'maksimr/vim-yate'
 
 " Bundle 'vim-scripts/guicolorscheme.vim'
@@ -71,7 +71,7 @@ syntax enable
 
 set nowrap                        " Don't wrap lines
 set scrolloff=7                   " Show 3 lines of context around the cursor.
-set tabstop=2 shiftwidth=2        " A tab is two spaces
+set tabstop=4 shiftwidth=4        " A tab is two spaces
 set expandtab                     " Use spaces, not tabs
 set backspace=indent,eol,start    " Backspace through everything in insert mode
 
@@ -240,7 +240,7 @@ au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru
 " set noshowmode
 
 " airline
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 " let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#tab_min_count = 1
 
@@ -249,4 +249,10 @@ let g:vim_markdown_folding_disabled=1
 
 " Line under the status line
 set ruf=%32(%l\ %c\ [%Y/%{&ff}/%{strlen(&fenc)?&fenc:'none'}]\ %p%%%)
+
+" Go settings
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_trailing_whitespace_error = 0
 

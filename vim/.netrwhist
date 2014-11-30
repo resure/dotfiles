@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/resure/code/spikes/debian'
+let g:netrw_dirhist_2='/Users/resure/code/meteoforge'
+let g:netrw_dirhist_3='/Users/resure/code/eco'

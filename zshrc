@@ -5,12 +5,15 @@ ZSH_THEME=""
 DISABLE_AUTO_UPDATE="true"
 HIST_STAMPS="mm/dd"
 
-plugins=(git node npm vagrant)
+plugins=(git node npm vagrant django virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
 alias irc="TERM=screen-256color weechat-curses"
 alias tm="tmux attach || tmux new"
+alias fuck='sudo $(history -p \!\!)' 
+alias 'bemblock'='bem create -l desktop.blocks -b'
+alias 'bempage'='bem create -l desktop.bundles -b'
 
 extract () {
  if [ -f $1 ] ; then
@@ -96,3 +99,6 @@ if [[ -s "$HOME/.zlocal" ]] ; then
   source "$HOME/.zlocal"
 fi
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

@@ -77,3 +77,6 @@ pickle-email-*.html
 .DS_Store
 .*.swp
 .rvmrc
+
+/.idea/workspace.xml
+/.idea/tasks.xml
