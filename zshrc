@@ -11,6 +11,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias irc="TERM=screen-256color weechat-curses"
 alias tm="tmux attach || tmux new"
+alias gdfc="git diff --word-diff=color"
 
 extract () {
  if [ -f $1 ] ; then
