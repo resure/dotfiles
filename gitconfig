@@ -19,6 +19,7 @@
   ui = auto
 [github]
   user = resure
-
+[diff]
+  external = g_icdiff
 [push]
-	default = simple
+  default = simple
