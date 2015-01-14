@@ -1,0 +1,27 @@
+{
+    "^–∑" = moveUp:;
+    "^—Ç" = moveDown:;
+    "^–∏" = moveBackward:;
+    "^–∞" = moveForward:;
+    "^—Ä" = deleteBackward:;
+    "^–≤" = deleteForward:;
+    "^—Ñ" = moveToBeginningOfParagraph:;
+    "^—É" = moveToEndOfParagraph:;
+    "^–ª" = deleteToEndOfParagraph:;
+    "^–¥" = centerSelectionInVisibleArea:;
+    "^–º" = pageDown:;
+    "^–µ" = transpose:;
+    "^–Ω" = yank:;
+    "^—â" = (insertNewlineIgnoringFieldEditor:, moveBackward:);
+    "^–ó" = moveUpAndModifySelection:;
+    "^–¢" = moveDownAndModifySelection:;
+    "^–ò" = moveBackwardAndModifySelection:;
+    "^–ê" = moveForwardAndModifySelection:;
+    "^–§" = moveToBeginningOfParagraphAndModifySelection:;
+    "^–£" = moveToEndOfParagraphAndModifySelection:;
+    "^–ú" = pageDownAndModifySelection:;
+    "~^–∏" = moveWordBackward:;
+    "~^–∞" = moveWordForward:;
+    "~^–∏" = moveWordBackwardAndModifySelection:;
+    "~^–∞" = moveWordForwardAndModifySelection:;
+}
