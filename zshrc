@@ -15,6 +15,35 @@ alias fuck='sudo $(history -p \!\!)'
 alias 'bemblock'='bem create -l desktop.blocks -b'
 alias 'bempage'='bem create -l desktop.bundles -b'
 alias gdfc="git diff --word-diff=color"
+alias h="history"
+alias j="jobs"
+alias l="ls -lF ${colorflag}"
+alias la="ls -laF ${colorflag}"
+alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+alias sudo='sudo '
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias map="xargs -n1"
+for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+    alias "$method"="lwp-request -m '$method'"
+done
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias reload="exec $SHELL -l"
+
+# Create a data URL from a file
+function dataurl() {
+    local mimeType=$(file -b --mime-type "$1");
+    if [[ $mimeType == text/* ]]; then
+        mimeType="${mimeType};charset=utf-8";
+    fi
+    echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')";
+}
 
 extract () {
  if [ -f $1 ] ; then
