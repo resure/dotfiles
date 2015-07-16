@@ -5,9 +5,13 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias -- -="cd -"
 
+alias irc="TERM=screen-256color weechat-curses"
+alias tm="tmux attach || tmux new"
+
 alias such=git
 alias very=git
 alias wow='git status'
+alias fuck='sudo $(history -p \!\!)' 
 
 alias gcm='git commit -m'
 alias gds='git diff --staged'
