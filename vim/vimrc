@@ -49,8 +49,8 @@ Plugin 'heavenshell/vim-jsdoc'
 Plugin 'scrooloose/syntastic'
 Plugin 'marijnh/tern_for_vim'
 
-" Plugin 'tpope/vim-bundler'
-" Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-rails'
 Plugin 'plasticboy/vim-markdown'
 " Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-git'
@@ -59,7 +59,7 @@ Plugin 'leafgarland/typescript-vim'
 " Plugin 'kchmck/vim-coffee-script'
 " Plugin 'mintplant/vim-literate-coffeescript'
 " Plugin 'sickill/vim-pasta'
-" Plugin 'slim-template/vim-slim'
+Plugin 'slim-template/vim-slim'
 " Plugin 'wlangstroth/vim-haskell'
 " Plugin 'pangloss/vim-erlang'
 Plugin 'csexton/jekyll.vim'
@@ -280,4 +280,5 @@ let g:go_highlight_trailing_whitespace_error = 0
 nnoremap <leader>E :!./node_modules/.bin/enb make<CR>
 
 map <leader>l :redraw!<CR>
+map <leader>S :!cp % ~/tmp/tosay && sh ~/.bin/say_tmp && rm ~/tmp/tosay<CR>
 

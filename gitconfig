@@ -7,19 +7,64 @@
   editor = vim
   excludesfile = ~/.gitignore_global
   autocrlf = input
-[alias] co = checkout
+[alias]
+  co = checkout
   st = status -s
   l = log --graph --pretty=format':%C(yellow)%h%Cgreen%d%Creset %s %C(white) %an <%ae>, %ar%Creset'
   lol = log --
   unstage = reset HEAD --
   last = log -1 HEAD
-[merge]
-  tool = vimdiff
+  amend = commit --amend --reuse-message=HEAD
+  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+  di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+  c = clone --recursive
+  go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  contributors = shortlog --summary --numbered
 [color]
   ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold # line info
+  old = red # deletions
+  new = green # additions
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[diff]
+  renames = copies
+[diff "bin"]
+  textconv = hexdump -v -C
+[merge]
+  tool = vimdiff
 [github]
   user = resure
-[diff]
-  external = g_icdiff
+[url "git@github.com:"]
+	insteadOf = "gh:"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
+[url "git://github.com/"]
+  insteadOf = "github:"
+[url "git@gist.github.com:"]
+	insteadOf = "gst:"
+	pushInsteadOf = "gist:"
+	pushInsteadOf = "git://gist.github.com/"
+[url "git://gist.github.com/"]
+	insteadOf = "gist:"
+[url "git@github.yandex-team.ru:"]
+	insteadOf = "ygh:"
+	pushInsteadOf = "ygithub:"
+	pushInsteadOf = "git://github.yandex-team.ru/"
 [push]
-  default = simple
+	default = simple
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true

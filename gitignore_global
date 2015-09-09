@@ -80,3 +80,6 @@ pickle-email-*.html
 
 /.idea/workspace.xml
 /.idea/tasks.xml
+
+frontend/.jshintrc
+frontend/.jscsrc
