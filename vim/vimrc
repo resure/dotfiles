@@ -13,12 +13,14 @@ Plugin 'gmarik/vundle'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jlanzarotta/bufexplorer'
-" Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Shougo/unite.vim'
 
-" Plugin 'scrooloose/syntastic'
+Plugin 'vim-gitgutter'
+Plugin 'junegunn/fzf'
+
 Plugin 'ctags.vim'
-" Plugin 'airblade/vim-gitgutter'
+Plugin 'szw/vim-tags'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-eunuch'
@@ -42,7 +44,6 @@ Plugin 'jceb/vim-orgmode'
 
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'scrooloose/syntastic'
-Plugin 'airblade/vim-gitgutter'
 
 " Plugin 'tpope/vim-bundler'
 " Plugin 'tpope/vim-rails'
@@ -207,8 +208,9 @@ map <leader>m :set nu!<CR>:set paste!<CR>:set list!<CR>
 map <leader>tg :GitGutterToggle<CR>
 " let g:gitgutter_enabled = 0
 
-" ctrlp.vim
-" map <leader>f :CtrlPMixed<CR>
+" fuzzy finders
+" map <leader>t :CtrlPMixed<CR>
+map <leader>t :FZF<CR>
 
 " Clear out a search
 nnoremap <leader><space> :noh<cr>
@@ -251,8 +253,8 @@ au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru
 
 " airline
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#tab_min_count = 1
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#tab_min_count = 1
 
 " disable markdown folding
 let g:vim_markdown_folding_disabled=1
@@ -265,4 +267,7 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_trailing_whitespace_error = 0
+
+" enb make
+nnoremap <leader>E :!./node_modules/.bin/enb make<CR>
 
