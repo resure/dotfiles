@@ -13,11 +13,13 @@ Plugin 'gmarik/vundle'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jlanzarotta/bufexplorer'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Shougo/unite.vim'
+" Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'Shougo/unite.vim'
 
 Plugin 'vim-gitgutter'
 Plugin 'junegunn/fzf'
+
+Plugin 'majutsushi/tagbar'
 
 Plugin 'ctags.vim'
 Plugin 'szw/vim-tags'
@@ -43,7 +45,9 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'jceb/vim-orgmode'
 
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'heavenshell/vim-jsdoc'
 Plugin 'scrooloose/syntastic'
+Plugin 'marijnh/tern_for_vim'
 
 " Plugin 'tpope/vim-bundler'
 " Plugin 'tpope/vim-rails'
@@ -187,6 +191,7 @@ nnoremap <C-l> <C-w>l
 " NERDTree keys.
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nnoremap <silent> <C-f> :call FindInNERDTree()<CR>
+let NERDTreeShowHidden=1
 
 " Map to bufexplorer
 nnoremap <leader>e :BufExplorer<cr>
@@ -211,6 +216,9 @@ map <leader>tg :GitGutterToggle<CR>
 " fuzzy finders
 " map <leader>t :CtrlPMixed<CR>
 map <leader>t :FZF<CR>
+
+" Tagline
+nmap <F8> :TagbarToggle<CR>
 
 " Clear out a search
 nnoremap <leader><space> :noh<cr>
@@ -270,4 +278,6 @@ let g:go_highlight_trailing_whitespace_error = 0
 
 " enb make
 nnoremap <leader>E :!./node_modules/.bin/enb make<CR>
+
+map <leader>l :redraw!<CR>
 
