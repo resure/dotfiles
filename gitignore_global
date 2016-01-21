@@ -21,7 +21,6 @@ pkg/*
 
 # Logs and databases
 *.log
-*.sql
 *.sqlite
 log/*
 tmp/*
@@ -48,12 +47,12 @@ public/uploads/*
 # Node
 node_modules/
 
-#vim
+# Vim
 *~
 *.swp
 *.swo
 
-#rails
+# Rails
 *.rbc
 *.sassc
 capybara-*.html
@@ -78,5 +77,9 @@ pickle-email-*.html
 .*.swp
 .rvmrc
 
-/.idea/workspace.xml
-/.idea/tasks.xml
+# /.idea/workspace.xml
+# /.idea/tasks.xml
+/.idea
+
+.tern-port
+

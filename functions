@@ -249,6 +249,10 @@ function twitch {
     livestreamer http://twitch.tv/$1 $2
 }
 
+function activate_env {
+    source ~/code/env/$1/bin/activate
+}
+
 unalias c
 
 c() { cd ~/code/$1; }

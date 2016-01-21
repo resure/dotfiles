@@ -23,6 +23,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-eunuch'
 Plugin 'mattn/gist-vim'
 
+Plugin 'blindFS/vim-taskwarrior'
+
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
@@ -34,14 +36,14 @@ Plugin 'mattn/emmet-vim'
 
 Plugin 'tpope/vim-dispatch'
 
-Plugin 'bling/vim-airline'
+" Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 
 Plugin 'jceb/vim-orgmode'
 
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'scrooloose/syntastic'
-" Plugin 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rails'
@@ -65,13 +67,14 @@ Plugin 'maksimr/vim-yate'
 Plugin 'wavded/vim-stylus'
 
 " Plugin 'vim-scripts/guicolorscheme.vim'
-" Plugin 'flazz/vim-colorschemes'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'daylerees/colour-schemes', { 'rtp': 'vim/' }
 Plugin 'sjl/badwolf'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'dhruvasagar/vim-railscasts-theme'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 
@@ -204,7 +207,7 @@ map <leader>m :set nu!<CR>:set paste!<CR>:set list!<CR>
 
 " vim-gitgutter
 map <leader>tg :GitGutterToggle<CR>
-" let g:gitgutter_enabled = 0
+let g:gitgutter_enabled = 0
 
 " ctrlp.vim
 " map <leader>f :CtrlPMixed<CR>
@@ -249,7 +252,7 @@ au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru
 " set noshowmode
 
 " airline
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 " let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#tab_min_count = 1
 

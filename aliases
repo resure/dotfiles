@@ -13,6 +13,8 @@ alias very=git
 alias wow='git status'
 alias fuck='sudo $(history -p \!\!)' 
 
+alias exe='bundle exec'
+
 alias gcm='git commit -m'
 alias gds='git diff --staged'
 
