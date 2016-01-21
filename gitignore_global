@@ -77,9 +77,17 @@ pickle-email-*.html
 .*.swp
 .rvmrc
 
+<<<<<<< HEAD
 # /.idea/workspace.xml
 # /.idea/tasks.xml
 /.idea
 
 .tern-port
 
+=======
+/.idea/workspace.xml
+/.idea/tasks.xml
+
+frontend/.jshintrc
+frontend/.jscsrc
+>>>>>>> fffa891e9fd9195980a96d56ebd67b5eb2e50f62
