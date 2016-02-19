@@ -42,7 +42,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-dispatch'
 
 " Plugin 'bling/vim-airline'
-Plugin 'edkolev/tmuxline.vim'
+" Plugin 'edkolev/tmuxline.vim'
 
 Plugin 'jceb/vim-orgmode'
 
@@ -58,7 +58,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-git'
 Plugin 'leafgarland/typescript-vim'
 " Plugin 'groenewege/vim-less'
-" Plugin 'kchmck/vim-coffee-script'
+Plugin 'kchmck/vim-coffee-script'
 " Plugin 'mintplant/vim-literate-coffeescript'
 " Plugin 'sickill/vim-pasta'
 Plugin 'slim-template/vim-slim'
