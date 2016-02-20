@@ -1,0 +1,11 @@
+set antialias
+set mouse=a
+set guioptions-=T " no toolbar set guioptions-=m " no menus
+set guioptions-=r " no scrollbar on the right
+set guioptions-=R " no scrollbar on the right
+set guioptions-=l " no scrollbar on the left
+set guioptions-=b " no scrollbar on the bottom
+set guioptions=aiA
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+set gfn=Droid\ Sans\ Mono\ for\ Powerline\ 11

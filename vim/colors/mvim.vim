@@ -99,12 +99,12 @@ else
   hi DiffChange   guibg=#00bfff
   hi DiffDelete   gui=bold guifg=#000000 guibg=#6a5acd
   hi DiffText     gui=NONE guibg=#ffd700
-  hi LineNr       guifg=#888888 guibg=#E6E6E6
+  hi LineNr       guifg=#888888 guibg=#EEEEEE
   hi MatchParen   guifg=#ffffff guibg=#ab82ff
   hi Normal       gui=NONE guifg=#000000 guibg=#ffffff
   hi Search       guibg=#98f5ff guifg=NONE
   hi Statement    gui=bold guifg=#b51a02 guibg=NONE
-  hi Todo         gui=NONE guifg=#006400 guibg=#9aff9a
+  hi Todo         gui=NONE guifg=#006400 guibg=#A5D6A7
   hi Type         gui=bold guifg=#008b00 guibg=NONE
   hi WildMenu     guibg=#87ceeb guifg=#000000
   hi lCursor      guibg=fg guifg=bg

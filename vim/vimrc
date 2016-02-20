@@ -2,90 +2,122 @@
 " Vim TextEditor Configuration
 " Gadzhi Gadzhiev <gadzhi@gadzhiev.com>
 " https://github.com/resure/dotfiles
+
 set nocompatible
 
 filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/vundle'            " Plugins management
 
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jlanzarotta/bufexplorer'
-" Plugin 'ctrlpvim/ctrlp.vim'
-" Plugin 'Shougo/unite.vim'
+Plugin 'CSApprox'                 " Color schemes
 
-Plugin 'vim-gitgutter'
-Plugin 'junegunn/fzf'
+Plugin 'rking/ag.vim'             " Silver searcher
 
-Plugin 'majutsushi/tagbar'
+Plugin 'crookedneighbor/bufexplorer'  " Cool buffers switcher
 
-Plugin 'ctags.vim'
-Plugin 'szw/vim-tags'
+Plugin 'junegunn/fzf'             " Bindings for very fast go powered fuzzy file finder
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-eunuch'
-Plugin 'mattn/gist-vim'
+Plugin 'airblade/vim-gitgutter'   " Show git changes on the left of the line numbers
+map <leader>tg :GitGutterToggle<CR>
+let g:gitgutter_enabled = 1
+let g:gitgutter_realtime = 0
 
-Plugin 'blindFS/vim-taskwarrior'
+Plugin 'majutsushi/tagbar'        " Analyse and show tags of the current file in the split
+nmap <F8> :TagbarToggle<CR>
 
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
+" TODO
+" Plugin 'ctags.vim'
+" Plugin 'szw/vim-tags'
+
+Plugin 'tpope/vim-fugitive'       " Git bindings
+Plugin 'tpope/vim-eunuch'         " UNIX Shell bindings
+Plugin 'tpope/vim-repeat'         " Repeat support for many things
+Plugin 'tpope/vim-speeddating'    " Use CTRL-A/CTRL-X to increment dates, times, and more
+Plugin 'tpope/vim-unimpaired'     " Pairs of handy bracket mappings
+Plugin 'tpope/vim-commentary'     " Comment stuff out
+Plugin 'tpope/vim-surround'       " Quoting/parenthesizing made simple
+" Plugin 'svermeulen/vim-easyclip'  " Simplified clipboard functionality
+" Plugin 'sickill/vim-pasta'        " Improved pasting experience
+
+Plugin 'tpope/vim-vinegar'        " Improved filesystem exploring
+Plugin 'tpope/vim-rsi'            " Readline!
+Plugin 'tpope/vim-endwise'        " Some auto "end" insertings
+Plugin 'tpope/vim-haystack'       " Fuzzy matching for vim plugins
+
+                                  " Editorconfig support
+Plugin 'editorconfig/editorconfig-vim'
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+                                  " Things for snippets
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
-Plugin 'mattn/emmet-vim'
 
-Plugin 'tpope/vim-dispatch'
+Plugin 'mattn/emmet-vim'          " Expand css-like selectors to html code
 
-" Plugin 'bling/vim-airline'
-" Plugin 'edkolev/tmuxline.vim'
+Plugin 'tpope/vim-dispatch'       " Heavy external commands dispatcher
 
-Plugin 'jceb/vim-orgmode'
+Plugin 'tpope/vim-projectionist'  " Projects config plugin
 
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'heavenshell/vim-jsdoc'
+
+
+                                  " Languages and frameworks
+
+                                  " JavaScript world
+Plugin 'othree/yajs.vim'          " Nice js syntax support
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'maksimr/vim-yate'         " Yandex guys really like bicycles
+Plugin 'moll/vim-node'            " Some useful hotkeys for nodejs
+Plugin 'maksimr/vim-jsbeautify'   " Beautify based on editorconfig
+Plugin 'othree/javascript-libraries-syntax.vim'
+let g:used_javascript_libs = 'underscore,backbone,jasmine,chai,handlebars'
+Plugin 'heavenshell/vim-jsdoc'    " Well, it's for jsdoc
 Plugin 'scrooloose/syntastic'
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
 Plugin 'marijnh/tern_for_vim'
 
+
+Plugin 'vim-ruby/vim-ruby'        " Ruby world
+Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rails'
-Plugin 'plasticboy/vim-markdown'
-" Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-git'
-Plugin 'leafgarland/typescript-vim'
-" Plugin 'groenewege/vim-less'
-Plugin 'kchmck/vim-coffee-script'
-" Plugin 'mintplant/vim-literate-coffeescript'
-" Plugin 'sickill/vim-pasta'
+Plugin 'kchmck/vim-coffee-script' " It's here because I only use CoffeeScript in rails projects
 Plugin 'slim-template/vim-slim'
-" Plugin 'wlangstroth/vim-haskell'
-" Plugin 'pangloss/vim-erlang'
-Plugin 'csexton/jekyll.vim'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'wting/rust.vim'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'jnwhiteh/vim-golang'
-Plugin 'maksimr/vim-yate'
+
+
+                                  " CSS world
+Plugin 'tpope/vim-haml'           " It's for SCSS actually
+Plugin 'hail2u/vim-css3-syntax'
 Plugin 'wavded/vim-stylus'
 
-" Plugin 'vim-scripts/guicolorscheme.vim'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'daylerees/colour-schemes', { 'rtp': 'vim/' }
+
+                                  " Omni complete based on color highlighting
+Plugin 'vim-scripts/SyntaxComplete'
+if has("autocmd") && exists("+omnifunc")
+autocmd Filetype *
+        \	if &omnifunc == "" |
+        \		setlocal omnifunc=syntaxcomplete#Complete |
+        \	endif
+endif
+
+
+                                  " Additional color schemes
 Plugin 'sjl/badwolf'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'dhruvasagar/vim-railscasts-theme'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
-Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 
 filetype plugin indent on         " Required for Vundle
 syntax enable
+
+set t_Co=256
 
 set nowrap                        " Don't wrap lines
 set scrolloff=7                   " Show 3 lines of context around the cursor.
@@ -93,9 +125,29 @@ set tabstop=4 shiftwidth=4        " A tab is two spaces
 set expandtab                     " Use spaces, not tabs
 set backspace=indent,eol,start    " Backspace through everything in insert mode
 
-set modelines=0                   " Preventing some security exploits.
+                                  " Some good defaults for vim-sensitive
+                                  " TODO Explain all this options
+set complete-=i
+set smarttab
+set autoindent
+set nrformats-=octal
+set ttimeout
+set ttimeoutlen=100
+set lazyredraw
+" set formatoptions+=j
+set autoread
+if &history < 1000
+  set history=1000
+endif
+if &tabpagemax < 50
+  set tabpagemax=50
+endif
+if !empty(&viminfo)
+  set viminfo^=!
+endif
+set sessionoptions-=options
 
-" set nobackup                      " Don't make a backup before overwriting a file.
+set modelines=0                   " Preventing some security exploits.
 
 set backupdir=~/.vim/_backup      " Where to put backup files.
 set directory=~/.vim/_temp        " Where to put swap files.
@@ -103,18 +155,14 @@ set directory=~/.vim/_temp        " Where to put swap files.
 set showcmd                       " Display incomplete commands and mode you're in
 set showmode
 
-set linespace=4                   " Add some line space for easy reading.
-
 set visualbell                    " Disable visual bell.
 
 set encoding=utf-8                " Set main encoding.
 
-set autoindent
-
-set hidden                        " Handle multiple buffers better.
+set hidden                        " Enhanced command line completion (hiding instead of closing)
 
 set wildmenu                      " Enhanced command line completion.
-set wildmode=list:longest
+set wildmode=list:longest,full
 
 set title                         " Set the terminal's title.
 set ttyfast                       " Indicates a fast terminal connection.
@@ -123,6 +171,7 @@ set ruler                         " Show the current line and column number.
 set number                        " Show line numbers.
 
 set laststatus=2                  " Show the status line all the time.
+
 hi StatusLine ctermbg=white ctermfg=darkblue
 hi StatusLineNC ctermbg=black ctermfg=grey
 highlight Search ctermfg=White ctermbg=Blue
@@ -136,11 +185,10 @@ set incsearch                     " Highlighting search results.
 set showmatch
 set hlsearch
 
-"set wrap                         " Making Vim handle long lines correctly.
-"set textwidth=79
-"set linebreak
-"set formatoptions=qrn1
-"set colorcolumn=85
+" set wrap                         " Making Vim handle long lines correctly.
+" set textwidth=79
+" set linebreak
+" set formatoptions=qrn1
 
 set list                          " Better invisible characters.
 set listchars=tab:▸\ ,eol:¬
@@ -150,9 +198,6 @@ set ttymouse=xterm2
 
 set splitbelow
 set splitright
-set wildmenu
-set wildmode=list:longest,full
-
 
 let mapleader = ","               " Setup leader key.
 
@@ -169,8 +214,6 @@ vnoremap ; :
 " Turning off vim's regex chars
 nnoremap / /\v
 vnoremap / /\v
-
-nnoremap <leader>a :Ack
 
 " Re-hardwrap paragraphs of text
 nnoremap <leader>q gqip
@@ -191,13 +234,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" NERDTree keys.
-silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
-nnoremap <silent> <C-f> :call FindInNERDTree()<CR>
-let NERDTreeShowHidden=1
-
-" Map to bufexplorer
-nnoremap <leader>e :BufExplorer<cr>
 
 " Tab mappings
 map <leader>tt :tabnew<CR>
@@ -212,13 +248,7 @@ map <leader>tm :tabmove
 
 map <leader>m :set nu!<CR>:set paste!<CR>:set list!<CR>
 
-" vim-gitgutter
-map <leader>tg :GitGutterToggle<CR>
-let g:gitgutter_enabled = 0
 
-" fuzzy finders
-" map <leader>t :CtrlPMixed<CR>
-map <leader>t :FZF<CR>
 
 " Tagline
 nmap <F8> :TagbarToggle<CR>
@@ -226,21 +256,11 @@ nmap <F8> :TagbarToggle<CR>
 " Clear out a search
 nnoremap <leader><space> :noh<cr>
 
-" GUI
-set antialias
-set mouse=a
-set guioptions-=T " no toolbar set guioptions-=m " no menus
-set guioptions-=r " no scrollbar on the right
-set guioptions-=R " no scrollbar on the right
-set guioptions-=l " no scrollbar on the left
-set guioptions-=b " no scrollbar on the bottom
-set guioptions=aiA
-set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
-set gfn=Droid\ Sans\ Mono\ for\ Powerline\ 11
+" Fast switch between two last files
+nnoremap <leader><leader> <c-^>
 
-" Russian key maps
-source ~/.vim/russian
+" GUI
+source ~/.vim/gui
 
 " Fast switch between two last files
 nnoremap <leader><leader> <c-^>
@@ -262,26 +282,39 @@ au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru
 " turn off default mode indicator
 " set noshowmode
 
-" airline
-" let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#tab_min_count = 1
-
-" disable markdown folding
-let g:vim_markdown_folding_disabled=1
-
 " Line under the status line
 set ruf=%32(%l\ %c\ [%Y/%{&ff}/%{strlen(&fenc)?&fenc:'none'}]\ %p%%%)
 
-" Go settings
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_trailing_whitespace_error = 0
+" Some configs for diffs
+" highlight! link DiffText Todo
+highlight DiffAdd    cterm=bold ctermfg=15 ctermbg=22 gui=none guifg=bg guibg=Red
+highlight DiffDelete cterm=bold ctermfg=15 ctermbg=52 gui=none guifg=bg guibg=Red
+highlight DiffChange cterm=bold ctermfg=15 ctermbg=53 gui=none guifg=bg guibg=Red
+highlight DiffText   cterm=bold ctermfg=16 ctermbg=39 gui=none guifg=bg guibg=Red
 
-" enb make
-nnoremap <leader>E :!./node_modules/.bin/enb make<CR>
-
-map <leader>l :redraw!<CR>
+map <leader>; :redraw!<CR>
 map <leader>S :!cp % ~/tmp/tosay && sh ~/.bin/say_tmp && rm ~/tmp/tosay<CR>
 
+color mvim
+" Switching between two good themes
+" TODO Make this work correctly when switching back to mvim
+" (currently colors are breaking during that)
+" function! s:SwitchTheme()
+"   if exists('g:current_theme')
+"     if g:current_theme == 'macvim'
+"       let g:current_theme = 'tomorrow'
+"       color Tomorrow-Night-Eighties
+"     elseif g:current_theme == 'tomorrow'
+"       let g:current_theme = 'macvim'
+"       color mvim256
+"     endif
+"   else
+"     let g:current_theme = 'tomorrow'
+"     color Tomorrow-Night-Eighties
+"   endif
+" endfunction
+" map <silent> <F6> :call <SID>SwitchTheme()<CR>
+
+map <leader>t :FZF<CR>
+nnoremap <leader>a :Ag
+nnoremap <leader>e :BufExplorer<cr>
