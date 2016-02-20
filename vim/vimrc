@@ -290,11 +290,11 @@ au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru
 set ruf=%32(%l\ %c\ [%Y/%{&ff}/%{strlen(&fenc)?&fenc:'none'}]\ %p%%%)
 
 " Some configs for diffs
-" highlight! link DiffText Todo
-highlight DiffAdd    cterm=bold ctermfg=15 ctermbg=22 gui=none guifg=bg guibg=Red
-highlight DiffDelete cterm=bold ctermfg=15 ctermbg=52 gui=none guifg=bg guibg=Red
-highlight DiffChange cterm=bold ctermfg=15 ctermbg=53 gui=none guifg=bg guibg=Red
-highlight DiffText   cterm=bold ctermfg=16 ctermbg=39 gui=none guifg=bg guibg=Red
+highlight! link DiffText Todo
+highlight DiffAdd    cterm=bold ctermfg=15 ctermbg=115
+highlight DiffDelete cterm=bold ctermfg=15 ctermbg=166
+highlight DiffChange cterm=bold ctermfg=15 ctermbg=108
+highlight DiffText   cterm=bold ctermfg=16 ctermbg=39
 
 map <leader>; :redraw!<CR>
 map <leader>S :!cp % ~/tmp/tosay && sh ~/.bin/say_tmp && rm ~/tmp/tosay<CR>
