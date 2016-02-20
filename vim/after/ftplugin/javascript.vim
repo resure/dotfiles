@@ -10,8 +10,3 @@ map <leader>C :!clear && jscs % -c ~/.jscsrc<CR>
 
 map <leader>l :SyntasticCheck<CR>
 map <leader>ll :SyntasticReset<CR>
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
