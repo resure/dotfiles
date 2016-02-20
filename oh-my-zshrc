@@ -135,3 +135,4 @@ if [[ -s "$HOME/.zlocal" ]] ; then
   source "$HOME/.zlocal"
 fi
 
+export FZF_DEFAULT_COMMAND='ag -g ""'
