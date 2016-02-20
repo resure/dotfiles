@@ -46,6 +46,10 @@ Plugin 'tpope/vim-rsi'            " Readline!
 Plugin 'tpope/vim-endwise'        " Some auto "end" insertings
 Plugin 'tpope/vim-haystack'       " Fuzzy matching for vim plugins
 
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'edkolev/tmuxline.vim'
+
                                   " Editorconfig support
 Plugin 'editorconfig/editorconfig-vim'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
@@ -318,3 +322,6 @@ color mvim
 map <leader>t :FZF<CR>
 nnoremap <leader>a :Ag
 nnoremap <leader>e :BufExplorer<cr>
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'papercolor'
