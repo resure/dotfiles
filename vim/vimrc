@@ -116,6 +116,7 @@ endif
 Plugin 'sjl/badwolf'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'dhruvasagar/vim-railscasts-theme'
+Plugin 'yosiat/oceanic-next-vim'
 
 call vundle#end()
 
@@ -195,7 +196,7 @@ set hlsearch
 " set linebreak
 " set formatoptions=qrn1
 
-set list                          " Better invisible characters.
+" set list                         " Better invisible characters.
 set listchars=tab:▸\ ,eol:¬
 
 set mouse=a                       " Some stuff to get the mouse going in term.
@@ -320,6 +321,12 @@ color mvim
 " endfunction
 " map <silent> <F6> :call <SID>SwitchTheme()<CR>
 
+function! s:GoToTheDarkSide()
+    AirlineTheme kolor
+    color OceanicNext
+endfunction
+map <silent> <F6> :call <SID>GoToTheDarkSide()<CR>
+
 map <leader>t :FZF<CR>
 nnoremap <leader>a :Ag
 nnoremap <leader>a :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
@@ -333,6 +340,7 @@ nnoremap <leader>e :BufExplorer<cr>
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'papercolor'
+" let g:airline_theme = 'luna'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tabs = 1
 let g:airline#extensions#tabline#tab_min_count = 2
