@@ -82,7 +82,7 @@ let g:used_javascript_libs = 'underscore,backbone,jasmine,chai,handlebars'
 Plugin 'heavenshell/vim-jsdoc'    " Well, it's for jsdoc
 Plugin 'scrooloose/syntastic'
 let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 Plugin 'marijnh/tern_for_vim'
