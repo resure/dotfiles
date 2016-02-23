@@ -304,27 +304,29 @@ color mvim
 " Switching between two good themes
 " TODO Make this work correctly when switching back to mvim
 " (currently colors are breaking during that)
-" function! s:SwitchTheme()
-"   if exists('g:current_theme')
-"     if g:current_theme == 'macvim'
-"       let g:current_theme = 'tomorrow'
-"       color Tomorrow-Night-Eighties
-"     elseif g:current_theme == 'tomorrow'
-"       let g:current_theme = 'macvim'
-"       color mvim256
-"     endif
-"   else
-"     let g:current_theme = 'tomorrow'
-"     color Tomorrow-Night-Eighties
-"   endif
-" endfunction
-" map <silent> <F6> :call <SID>SwitchTheme()<CR>
-
-function! s:GoToTheDarkSide()
-    AirlineTheme kolor
-    color OceanicNext
+function! s:SwitchTheme()
+    if exists('g:current_theme')
+        if g:current_theme == 'macvim'
+            let g:current_theme = 'tomorrow'
+            AirlineTheme kolor
+            color Tomorrow-Night-Bright
+        elseif g:current_theme == 'tomorrow'
+            let g:current_theme = 'macvim'
+            AirlineTheme papercolor
+            color mvim
+        endif
+    else
+        let g:current_theme = 'tomorrow'
+        color Tomorrow-Night-Eighties
+    endif
 endfunction
-map <silent> <F6> :call <SID>GoToTheDarkSide()<CR>
+map <silent> <F6> :call <SID>SwitchTheme()<CR>
+
+" function! s:GoToTheDarkSide()
+"     AirlineTheme kolor
+"     color OceanicNext
+" endfunction
+" map <silent> <F6> :call <SID>GoToTheDarkSide()<CR>
 
 map <F9> :Dispatch<CR>
 map <leader>r :Dispatch!<CR>
