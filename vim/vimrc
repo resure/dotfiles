@@ -158,8 +158,10 @@ set modelines=0                   " Preventing some security exploits.
 set backupdir=~/.vim/_backup      " Where to put backup files.
 set directory=~/.vim/_temp        " Where to put swap files.
 
-set showcmd                       " Display incomplete commands and mode you're in
-set showmode
+" TODO disabled because it provokes strange bug with disappearing cursor on
+" navigation up or down from line with cursor on matched brace
+" set showcmd                       " Display incomplete commands and mode you're in
+" set showmode
 
 set visualbell                    " Disable visual bell.
 
