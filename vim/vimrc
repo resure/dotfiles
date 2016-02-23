@@ -198,7 +198,7 @@ set hlsearch
 " set linebreak
 " set formatoptions=qrn1
 
-" set list                         " Better invisible characters.
+set list                          " Better invisible characters.
 set listchars=tab:▸\ ,eol:¬
 
 set mouse=a                       " Some stuff to get the mouse going in term.
@@ -208,9 +208,6 @@ set splitbelow
 set splitright
 
 let mapleader = ","               " Setup leader key.
-
-" Switch invisible characters
-map <leader>i :set list!<CR>
 
 " Delete all trailing whitespacces
 map <leader>u :%s/\s\+$//<CR>
@@ -254,7 +251,7 @@ map <leader>tf :tabfirst<CR>
 map <leader>tl :tablast<CR>
 map <leader>tm :tabmove
 
-map <leader>m :set nu!<CR>:set paste!<CR>:set list!<CR>
+map <leader>. :set nu!<CR>:set paste!<CR>:set list!<CR>
 
 
 
@@ -340,6 +337,8 @@ if executable('pt')
   let g:unite_source_grep_encoding = 'utf-8'
 endif
 nnoremap <leader>e :BufExplorer<cr>
+nnoremap <leader>q :bd<cr>
+nnoremap <leader>m :ccl<cr>:pc<cr> " Closing annoying scratch and quickfix buffers
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'papercolor'
