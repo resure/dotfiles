@@ -17,7 +17,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias irc="TERM=screen-256color weechat-curses"
 alias tm="tmux attach || tmux new"
-alias fuck='sudo $(history -p \!\!)' 
+alias fuck='sudo $(history -p \!\!)'
 alias 'bemblock'='bem create -l desktop.blocks -b'
 alias 'bempage'='bem create -l desktop.bundles -b'
 alias gdfc="git diff --word-diff=color"
@@ -41,6 +41,9 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 done
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias reload="exec $SHELL -l"
+
+alias gds="git diff --staged"
+alias gcm="git commit -m"
 
 # Create a data URL from a file
 function dataurl() {
