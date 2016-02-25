@@ -40,7 +40,7 @@ hi Question     gui=bold guifg=#458b00
 hi SignColumn   guibg=#bebebe guifg=#af87af
 hi SpecialKey   guifg=#eeeeee
 hi SpellBad     guisp=#ee2c2c gui=undercurl
-hi SpellCap     guisp=#eeeeee gui=undercurl
+hi SpellCap     guisp=#bb0000 gui=undercurl
 hi SpellLocal   guisp=#008b8b gui=undercurl
 hi SpellRare    guisp=#ff00ff gui=undercurl
 hi StatusLine   gui=NONE guifg=#ffffff guibg=#2f4f4f
