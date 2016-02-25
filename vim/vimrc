@@ -322,6 +322,7 @@ function! s:SwitchTheme()
         endif
     else
         let g:current_theme = 'tomorrow'
+        AirlineTheme kolor
         color Tomorrow-Night-Eighties
     endif
 endfunction
