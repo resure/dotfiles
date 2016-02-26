@@ -1,6 +1,6 @@
-setlocal expandtab
-setlocal shiftwidth=4
-setlocal softtabstop=4
+set shiftwidth=4
+set softtabstop=0
+set noexpandtab
 
 map <leader>h :!clear && ~/node_modules/.bin/jshint %<CR>
 
