@@ -334,8 +334,8 @@ map <silent> <F6> :call <SID>SwitchTheme()<CR>
 " endfunction
 " map <silent> <F6> :call <SID>GoToTheDarkSide()<CR>
 
-map <F9> :Dispatch<CR>
-map <leader>r :Dispatch!<CR>
+map <F9> :Dispatch!<CR>
+map <leader>r :Dispatch<CR>
 map <leader>t :FZF<CR>
 nnoremap <leader>a :Ag
 nnoremap <leader>a :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
