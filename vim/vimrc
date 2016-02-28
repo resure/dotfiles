@@ -328,11 +328,14 @@ function! s:SwitchTheme()
 endfunction
 map <silent> <F6> :call <SID>SwitchTheme()<CR>
 
+
 " function! s:GoToTheDarkSide()
 "     AirlineTheme kolor
 "     color OceanicNext
 " endfunction
 " map <silent> <F6> :call <SID>GoToTheDarkSide()<CR>
+
+map <F7> mzgg=G`z           " Reformat buffer
 
 map <F9> :Dispatch!<CR>
 map <leader>r :Dispatch<CR>
