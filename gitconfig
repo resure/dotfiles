@@ -11,6 +11,7 @@
   co = checkout
   st = status -s
   l = log --graph --pretty=format':%C(yellow)%h%Cgreen%d%Creset %s %C(white) %an <%ae>, %ar%Creset'
+  ll = log --graph --pretty=format':%C(yellow)%h%Creset %s %C(white) %Creset'
   lol = log --
   unstage = reset HEAD --
   last = log -1 HEAD
