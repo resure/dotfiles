@@ -305,7 +305,7 @@ highlight DiffText   cterm=bold ctermfg=16 ctermbg=39
 map <leader>; :redraw!<CR>
 map <leader>S :!cp % ~/tmp/tosay && sh ~/.bin/say_tmp && rm ~/tmp/tosay<CR>
 
-color mvim
+color Tomorrow-Night-Bright
 " Switching between two good themes
 " TODO Make this work correctly when switching back to mvim
 " (currently colors are breaking during that)
@@ -353,7 +353,7 @@ nnoremap <leader>q :bd<cr>
 nnoremap <leader>m :ccl<cr>:pc<cr> " Closing annoying scratch and quickfix buffers
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'papercolor'
+let g:airline_theme = 'kolor'
 " let g:airline_theme = 'luna'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tabs = 1
