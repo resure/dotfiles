@@ -103,15 +103,6 @@ function server() {
 	python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port";
 }
 
-# Start a PHP server from a directory, optionally specifying the port
-# (Requires PHP 5.4.0+.)
-function phpserver() {
-	local port="${1:-4000}";
-	local ip=$(ipconfig getifaddr en1);
-	sleep 1 && open "http://${ip}:${port}/" &
-	php -S "${ip}:${port}";
-}
-
 # Compare original and gzipped file size
 function gz() {
 	local origsize=$(wc -c < "$1");
@@ -249,17 +240,15 @@ function twitch {
     livestreamer http://twitch.tv/$1 $2
 }
 
-function activate_env {
-    source ~/code/env/$1/bin/activate
+clck() {
+  wget -qO- "https://clck.ru/--?url=$1"\ | pbcopy
 }
 
-unalias c
+nda() {
+  wget -qO- "https://$nda_clck/--?url=$1"\ | pbcopy
+}
 
-c() { cd ~/code/$1; }
-_c() { _files -W ~/code -/; }
-compdef _c c
-
-h() { cd ~/$1; }
-_h() { _files -W ~/ -/; }
-compdef _h h
+# c() { cd ~/code/$1; }
+# _c() { _files -W ~/code -/; }
+# compdef _c c
 
