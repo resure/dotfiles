@@ -90,7 +90,7 @@ let g:syntastic_mode_map = { "mode": "passive" }
 "         \ "mode": "active",
 "         \ "active_filetypes": ["ruby", "php"],
 "         \ "passive_filetypes": ["javascript"] }
-Plugin 'marijnh/tern_for_vim'
+" Plugin 'marijnh/tern_for_vim'
 
 
 Plugin 'vim-ruby/vim-ruby'        " Ruby world
