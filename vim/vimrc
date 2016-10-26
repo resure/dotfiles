@@ -47,9 +47,9 @@ Plugin 'tpope/vim-rsi'            " Readline!
 Plugin 'tpope/vim-endwise'        " Some auto "end" insertings
 Plugin 'tpope/vim-haystack'       " Fuzzy matching for vim plugins
 
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'edkolev/tmuxline.vim'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'edkolev/tmuxline.vim'
 
                                   " Editorconfig support
 Plugin 'editorconfig/editorconfig-vim'
@@ -305,7 +305,7 @@ highlight DiffText   cterm=bold ctermfg=16 ctermbg=39
 map <leader>; :redraw!<CR>
 map <leader>S :!cp % ~/tmp/tosay && sh ~/.bin/say_tmp && rm ~/tmp/tosay<CR>
 
-color Tomorrow-Night-Bright
+" color Tomorrow-Night-Bright
 " Switching between two good themes
 " TODO Make this work correctly when switching back to mvim
 " (currently colors are breaking during that)
