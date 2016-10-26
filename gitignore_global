@@ -22,6 +22,7 @@ pkg/*
 # Logs and databases
 *.log
 *.sqlite
+*.sqlite3
 log/*
 tmp/*
 
@@ -76,18 +77,7 @@ pickle-email-*.html
 .DS_Store
 .*.swp
 .rvmrc
+.idea
+.remote-sync.json
 
-<<<<<<< HEAD
-# /.idea/workspace.xml
-# /.idea/tasks.xml
-/.idea
-
-.tern-port
-
-=======
-/.idea/workspace.xml
-/.idea/tasks.xml
-
-frontend/.jshintrc
-frontend/.jscsrc
->>>>>>> fffa891e9fd9195980a96d56ebd67b5eb2e50f62
+.tern-project
