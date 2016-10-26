@@ -1,13 +1,11 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
+autoload -U promptinit; promptinit
+prompt pure
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+source ~/.aliases
+source ~/.functions
+source ~/.localrc
 
-# Customize to your needs...
+# Stop on slashes while deleting
+autoload -U select-word-style
+select-word-style bash
+
