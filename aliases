@@ -12,8 +12,13 @@ alias such=git
 alias very=git
 alias wow='git status'
 alias fuck='sudo $(history -p \!\!)' 
+alias git-purify="git branch --merged master | grep -v -e 'master' -e '\*' | xargs -n 1 git branch -d && git remote prune origin"
 
 alias exe='bundle exec'
+alias n='npm run'
+
+alias npx='np --no-cleanup'
+alias dpx='npx && npm run deploy'
 
 alias gcm='git commit -m'
 alias gds='git diff --staged'
