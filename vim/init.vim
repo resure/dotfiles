@@ -1,1 +1,1 @@
-/Users/resure/.vimrc
+vimrc
