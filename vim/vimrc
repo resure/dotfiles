@@ -49,8 +49,8 @@ Plugin 'tpope/vim-haystack'       " Fuzzy matching for vim plugins
 
 Plugin 'vim-orgmode'
 
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'edkolev/tmuxline.vim'
 
                                   " Editorconfig support
@@ -309,11 +309,11 @@ map <leader>S :!cp % ~/tmp/tosay && sh ~/.bin/say_tmp && rm ~/tmp/tosay<CR>
 
 function! s:LoadTheme()
     if g:current_theme == 'dark'
-        AirlineTheme base16
+        " AirlineTheme base16
         color OceanicNext
     elseif g:current_theme == 'light'
         color tomorrow
-        AirlineTheme papercolor
+        " AirlineTheme papercolor
     endif
 endfunction
 
@@ -327,8 +327,8 @@ function! s:SwitchTheme()
 endfunction
 map <silent> <F6> :call <SID>SwitchTheme()<CR>
 
-let g:current_theme = 'dark'
-autocmd VimEnter * call s:LoadTheme()
+" let g:current_theme = 'light'
+" autocmd VimEnter * call s:LoadTheme()
 
 map <F7> mzgg=G`z           " Reformat buffer
 
@@ -347,10 +347,10 @@ nnoremap <leader>e :BufExplorer<cr>
 nnoremap <leader>q :bd<cr>
 nnoremap <leader>m :ccl<cr>:pc<cr> " Closing annoying scratch and quickfix buffers
 
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'kolor'
+" let g:airline_powerline_fonts = 1
+" let g:airline_theme = 'kolor'
 " let g:airline_theme = 'luna'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_tabs = 1
-let g:airline#extensions#tabline#tab_min_count = 2
-let g:airline#extensions#tabline#show_buffers = 0
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#show_tabs = 1
+" let g:airline#extensions#tabline#tab_min_count = 2
+" let g:airline#extensions#tabline#show_buffers = 0
