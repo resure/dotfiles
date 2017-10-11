@@ -17,8 +17,7 @@ alias git-purify="git branch --merged master | grep -v -e 'master' -e '\*' | xar
 alias exe='bundle exec'
 alias n='npm run'
 
-alias npx='np --no-cleanup'
-alias dpx='npx && npm run deploy'
+alias dpx='git push && np --no-cleanup && npm run deploy'
 
 alias gcm='git commit -m'
 alias gds='git diff --staged'
