@@ -1,8 +1,5 @@
 [user]
   name = Gadzhi Gadzhiev
-  email = resure@zireael.org
-[heroku]
-  account = resure
 [core]
   editor = vim
   excludesfile = ~/.gitignore_global
