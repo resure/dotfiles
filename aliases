@@ -13,6 +13,7 @@ alias very=git
 alias wow='git status'
 alias fuck='sudo $(history -p \!\!)' 
 alias git-purify="git branch --merged master | grep -v -e 'master' -e '\*' | xargs -n 1 git branch -d && git remote prune origin"
+alias git-ascend="git checkout master && git pull && git-purify"
 
 alias exe='bundle exec'
 alias n='npm run'
@@ -20,7 +21,8 @@ alias n='npm run'
 alias dpx='git push && np --no-cleanup && npm run deploy'
 
 alias gcm='git commit -m'
-alias gds='git diff --staged'
+alias gd="git diff -- ':!package-lock.json'"
+alias gds="git diff --staged -- ':!package-lock.json'"
 
 alias y="GITHUB_HOST=github.yandex-team.ru hub"
 
@@ -159,5 +161,5 @@ alias reload="exec $SHELL -l"
 
 # Git email things
 alias set-git-work-email="git config user.email 'resure@yandex-team.ru'"
-alias set-git-personal-email="git config user.email 'resure@zireael.org'"
+alias set-git-personal-email="git config user.email '168296+resure@users.noreply.github.com'"
 

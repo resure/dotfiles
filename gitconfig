@@ -1,5 +1,6 @@
 [user]
-  name = Gadzhi Gadzhiev
+	name = Gadzhi Gadzhiev
+	email = resure@yandex-team.ru
 [core]
   editor = vim
   excludesfile = ~/.gitignore_global
@@ -66,3 +67,6 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+	process = git-lfs filter-process
+[url "git@bb.yandex-team.ru:"]
+	insteadOf = https://bb.yandex-team.ru/
