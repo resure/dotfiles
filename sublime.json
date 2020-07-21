@@ -2,14 +2,18 @@
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
 	"font_face": "JetBrains Mono",
 	"font_size": 14,
-	"line_padding_bottom": 3,
-    "line_padding_top": 3,
 	"gutter": false,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
 	"line_numbers": false,
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
 	"margin": 15,
-	"theme": "Adaptive.sublime-theme"
+	"tab_size": 4,
+	"theme": "Adaptive.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"word_wrap": false
 }
