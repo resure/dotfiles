@@ -20,6 +20,8 @@ alias n='npm run'
 
 alias dpx='git push && np --no-cleanup && npm run deploy'
 
+alias ch='clickhouse-cli'
+
 alias gcm='git commit -m'
 alias gd="git diff -- ':!package-lock.json'"
 alias gds="git diff --staged -- ':!package-lock.json'"
