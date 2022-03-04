@@ -80,3 +80,8 @@ pickle-email-*.html
 .remote-sync.json
 
 .tern-project
+
+sa-key.preprod.json
+sa-key.staging.json
+sa-key.prod.json
+

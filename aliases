@@ -162,6 +162,6 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias reload="exec $SHELL -l"
 
 # Git email things
-alias set-git-work-email="git config user.email 'resure@yandex-team.ru'"
+alias set-git-work-email="git config user.email 'resure@yandex-team.com'"
 alias set-git-personal-email="git config user.email '168296+resure@users.noreply.github.com'"
 
