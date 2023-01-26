@@ -71,3 +71,5 @@
 	process = git-lfs filter-process
 [url "git@bb.yandex-team.ru:"]
 	insteadOf = https://bb.yandex-team.ru/
+[init]
+	defaultBranch = main
