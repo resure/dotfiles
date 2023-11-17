@@ -164,6 +164,9 @@ alias reload="exec $SHELL -l"
 # Git email things
 alias set-git-work-email="git config user.email 'resure@yandex-team.com'"
 alias set-git-personal-email="git config user.email '168296+resure@users.noreply.github.com'"
+alias set-git-arc-email="git config user.email 'resure@yandex-team.ru' && git config user.name 'resure'"
 
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+alias ytmp4='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
 
