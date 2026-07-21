@@ -56,7 +56,3 @@ HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
 
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/resure/.lmstudio/bin"
-# End of LM Studio CLI section
-
