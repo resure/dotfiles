@@ -1,0 +1,9 @@
+[theme]
+name = "terminal"
+auto_switch = true
+light_name = "tokyo-night-day"
+dark_name = "tokyo-night"
+
+[keys]
+prefix = "ctrl+f"
+
