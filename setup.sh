@@ -55,6 +55,11 @@ ln -s $PWD/gitignore_global ~/.gitignore_global
 ln -s $PWD/gtkrc-2.0 ~/.gtkrc-2.0
 ln -s $PWD/irbrc ~/.irbrc
 ln -s $PWD/tmux.conf ~/.tmux.conf
+
+# kitty: whole config dir. herdr: config file only (runtime sockets/logs/session stay local)
+mkdir -p ~/.config ~/.config/herdr
+ln -s $PWD/kitty ~/.config/kitty
+ln -s $PWD/herdr/config.toml ~/.config/herdr/config.toml
 echo "source ~/.vim/vimrc" > ~/.vimrc
 mkdir ~/.vim/{_backup,_temp}
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
