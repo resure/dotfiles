@@ -1,3 +1,4 @@
+onboarding = false
 [theme]
 name = "terminal"
 auto_switch = true
@@ -6,4 +7,3 @@ dark_name = "tokyo-night"
 
 [keys]
 prefix = "ctrl+f"
-
