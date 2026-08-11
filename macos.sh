@@ -14,5 +14,8 @@ defaults write com.apple.finder ShowPathbar -bool true
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
+# Repeated key presses
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # Show the ~/Library folder
 chflags nohidden ~/Library

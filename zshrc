@@ -1,6 +1,7 @@
 autoload -U promptinit; promptinit
 autoload -U compinit
 compinit
+bindkey -e
 
 # matches case insensitive for lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -53,4 +54,3 @@ select-word-style bash
 HISTFILE=~/.zsh_history
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
-
