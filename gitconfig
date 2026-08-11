@@ -65,11 +65,17 @@
 [push]
 	default = simple
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
 [url "git@bb.yandex-team.ru:"]
 	insteadOf = https://bb.yandex-team.ru/
 [init]
 	defaultBranch = main
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential

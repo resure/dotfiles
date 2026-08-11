@@ -85,3 +85,4 @@ sa-key.preprod.json
 sa-key.staging.json
 sa-key.prod.json
 
+**/.claude/settings.local.json
