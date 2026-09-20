@@ -135,3 +135,11 @@ git_info_for_prompt() {
 	fi
 }
 
+# Review a diff like a pull request: `review` for uncommitted changes, `review master..HEAD` for a range
+function review() {
+	if [ $# -eq 0 ]; then
+		tuicr -w;
+	else
+		tuicr -r "$@";
+	fi
+}

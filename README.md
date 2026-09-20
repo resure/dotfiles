@@ -22,6 +22,22 @@ Not automated:
 - `macos.sh` (Finder and keyboard defaults) is run by hand if wanted.
 - `gitconfig` carries a personal name and email.
 
+## Linux prerequisites
+
+`install-cli-tools.sh` only fetches the review tools; the base packages come from the distro and need root once. Arch:
+
+```sh
+sudo pacman -S --needed git curl tar gzip base-devel unzip nodejs npm
+```
+
+Ubuntu:
+
+```sh
+sudo apt install git curl tar gzip build-essential unzip nodejs npm
+```
+
+`base-devel` / `build-essential` give the C compiler nvim-treesitter compiles parsers with; node is for the TypeScript language server Mason installs. herdr is installed by its own installer from [herdr.dev](https://herdr.dev).
+
 ## What is here
 
 | Path | Linked to | Purpose |
@@ -39,7 +55,7 @@ Not automated:
 ## Daily workflow
 
 - `nvim`: browse the project (`<space>e` tree, `<space><space>` files, `<space>sg` grep, `<space>gg` lazygit). Pressing `<space>` and waiting shows every binding.
-- `tuicr -w` (uncommitted changes) or `tuicr -r master..HEAD` (a branch): review an agent's diff like a pull request. `c` comments a line, `v` selects a range first, `C` comments the file, `y` copies the whole review as markdown to paste to the agent, `?` lists keys.
+- `review` (uncommitted changes) or `review master..HEAD` (a branch), a wrapper over `tuicr`: review an agent's diff like a pull request. `c` comments a line, `v` selects a range first, `C` comments the file, `y` copies the whole review as markdown to paste to the agent, `?` lists keys.
 - `lazygit`: stage hunks, commit, discard.
 - `git diff`, `git show`, `git log -p` render through delta; `n`/`N` jump between files.
 
