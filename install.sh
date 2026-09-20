@@ -2,6 +2,7 @@
 set -euo pipefail
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export PATH="$HOME/.local/bin:$PATH"
 
 link() {
   local src="$DOTFILES/$1" dst="$2"
@@ -35,4 +36,4 @@ fi
 
 "$DOTFILES/install-cli-tools.sh"
 
-nvim --headless "+Lazy! restore" +qa
+nvim --headless "+Lazy! restore" "+lua require('config.bootstrap').run()" +qa

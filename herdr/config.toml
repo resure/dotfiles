@@ -1,10 +1,10 @@
 onboarding = false
 [theme]
+name = "terminal"
 auto_switch = true
-light_name = "catppuccin-latte"
-dark_name = "catppuccin"
+light_name = "tokyo-night-day"
+dark_name = "tokyo-night"
 
-name = "catppuccin"
 [keys]
 prefix = "ctrl+f"
 

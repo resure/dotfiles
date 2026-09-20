@@ -43,9 +43,13 @@ bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char 
 
+[[ -x /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="$HOME/.local/bin:$PATH"
+export EDITOR=nvim
+
 source ~/.aliases
 source ~/.functions
-source ~/.localrc
+[[ -f ~/.localrc ]] && source ~/.localrc
 
 # Stop on slashes while deleting
 autoload -U select-word-style

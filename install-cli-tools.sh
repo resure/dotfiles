@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 if [[ "$(uname -s)" == "Darwin" ]]; then
-  brew install neovim lazygit git-delta tuicr ripgrep fd fzf
+  brew bundle --no-upgrade --file="$DOTFILES/Brewfile"
   exit 0
 fi
 
@@ -18,6 +20,7 @@ TUICR_VERSION=0.26.0
 RIPGREP_VERSION=15.2.0
 FD_VERSION=10.5.0
 FZF_VERSION=0.74.4
+TREE_SITTER_VERSION=0.27.0
 
 BIN_DIR="$HOME/.local/bin"
 OPT_DIR="$HOME/.local/opt"
@@ -60,3 +63,11 @@ install_binary tuicr "$TUICR_VERSION" "https://github.com/agavra/tuicr/releases/
 install_binary rg "$RIPGREP_VERSION" "https://github.com/BurntSushi/ripgrep/releases/download/$RIPGREP_VERSION/ripgrep-$RIPGREP_VERSION-x86_64-unknown-linux-musl.tar.gz"
 install_binary fd "$FD_VERSION" "https://github.com/sharkdp/fd/releases/download/v$FD_VERSION/fd-v$FD_VERSION-x86_64-unknown-linux-musl.tar.gz"
 install_binary fzf "$FZF_VERSION" "https://github.com/junegunn/fzf/releases/download/v$FZF_VERSION/fzf-$FZF_VERSION-linux_amd64.tar.gz"
+
+if has_version tree-sitter "$TREE_SITTER_VERSION"; then
+  echo "tree-sitter $TREE_SITTER_VERSION already installed"
+else
+  echo "installing tree-sitter $TREE_SITTER_VERSION"
+  curl -fsSL "https://github.com/tree-sitter/tree-sitter/releases/download/v$TREE_SITTER_VERSION/tree-sitter-linux-x64.gz" | gunzip > "$TMP_DIR/tree-sitter"
+  install -m 755 "$TMP_DIR/tree-sitter" "$BIN_DIR/tree-sitter"
+fi

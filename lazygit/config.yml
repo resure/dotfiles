@@ -1,3 +1,3 @@
 git:
-  pagers:
-    - pager: delta --paging=never --line-numbers=false
+  diffRenderers:
+    - command: delta --paging=never --line-numbers=false
