@@ -167,5 +167,5 @@ alias ytmp4='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best
 
 alias c="cursor"
 alias cx="cursor-agent"
-
-
+alias cwb="cd ~/code/workbench && claude"
+alias ccx="cd ~/code/workbench && codex"

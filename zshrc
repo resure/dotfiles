@@ -58,5 +58,3 @@ select-word-style bash
 HISTFILE=~/.zsh_history
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
-
-
