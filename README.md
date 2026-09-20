@@ -45,4 +45,4 @@ Not automated:
 
 ## Updating tools
 
-On Linux bump the version variables at the top of `install-cli-tools.sh` and rerun it; tools already at the pinned version are skipped. On macOS `brew upgrade`; to add a package put it in `Brewfile`. For nvim plugins run `:Lazy update` and commit the changed `nvim/lazy-lock.json`.
+On Linux bump the version variables at the top of `install-cli-tools.sh` and rerun it; tools already at the pinned version are skipped. On macOS `brew upgrade`; to add a package put it in `Brewfile`. For nvim plugins run `:Lazy update` and commit the changed `nvim/lazy-lock.json`. When a machine already has an older LazyVim installed, the first `install.sh` run may rewrite `nvim/lazy-lock.json` with the old plugin set; `git checkout nvim/lazy-lock.json` and rerun.

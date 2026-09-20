@@ -36,4 +36,5 @@ fi
 
 "$DOTFILES/install-cli-tools.sh"
 
-nvim --headless "+Lazy! restore" "+lua require('config.bootstrap').run()" +qa
+nvim --headless "+Lazy! restore" +qa
+nvim --headless "+lua require('config.bootstrap').run()" +qa
