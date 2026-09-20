@@ -59,7 +59,6 @@ cask "tableplus"
 cask "openlens"
 cask "obsidian"
 
-cask "chromium"
 cask "microsoft-edge"
 cask "transmit"
 cask "transmission"
