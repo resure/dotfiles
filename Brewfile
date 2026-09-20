@@ -1,5 +1,4 @@
 tap "anomalyco/tap"
-tap "nikitabobko/tap"
 
 # review tooling, also installed as pinned binaries on Linux by install-cli-tools.sh
 brew "neovim"
@@ -46,7 +45,6 @@ brew "yubico-piv-tool"
 cask "kitty"
 cask "ghostty"
 cask "font-jetbrains-mono"
-cask "aerospace"
 cask "rectangle"
 cask "scroll-reverser"
 cask "keyboard-maestro"
