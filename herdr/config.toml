@@ -1,9 +1,13 @@
+onboarding = false
 [theme]
-name = "terminal"
 auto_switch = true
-light_name = "tokyo-night-day"
-dark_name = "tokyo-night"
+light_name = "catppuccin-latte"
+dark_name = "catppuccin"
 
+name = "catppuccin"
 [keys]
 prefix = "ctrl+f"
 
+[ui]
+show_agent_labels_on_pane_borders = true
+agent_panel_sort = "priority"
