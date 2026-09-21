@@ -2,9 +2,10 @@
 	name = Gadzhi Gadzhiev
 	email = 168296+resure@users.noreply.github.com
 [core]
-  editor = vim
+  editor = nvim
   excludesfile = ~/.gitignore_global
   autocrlf = input
+  pager = delta
 [alias]
   co = checkout
   st = status -s
@@ -43,7 +44,12 @@
 [diff "bin"]
   textconv = hexdump -v -C
 [merge]
-  tool = vimdiff
+  tool = nvimdiff
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
+  line-numbers = true
 [github]
   user = resure
 [url "git@github.com:"]
@@ -76,7 +82,7 @@
 	defaultBranch = main
 [credential "https://github.com"]
 	helper =
-	helper = !/opt/homebrew/bin/gh auth git-credential
+	helper = !gh auth git-credential
 [credential "https://gist.github.com"]
 	helper =
-	helper = !/opt/homebrew/bin/gh auth git-credential
+	helper = !gh auth git-credential
