@@ -17,12 +17,12 @@ git clone git@github.com:resure/dotfiles.git ~/code/dotfiles
 
 Not automated:
 
-- Shell startup. On macOS `zshrc` is linked; it puts Homebrew and `~/.local/bin` on `PATH` and sources `~/.aliases`, `~/.functions` and, if present, `~/.localrc` (machine-local: tokens, work aliases, version managers). On Linux the stock `~/.bashrc` stays and needs `source ~/.aliases`, `source ~/.functions` and `~/.local/bin` on `PATH` added.
+- Shell startup. On macOS `zshrc` is linked; it puts Homebrew and `~/.local/bin` on `PATH` and sources `~/.aliases`, `~/.functions` and, if present, `~/.localrc` (machine-local: tokens, work aliases, version managers). On Linux the stock `~/.bashrc` stays and needs the same wiring added by hand: `~/.local/bin` on `PATH`, `source ~/.aliases`, `source ~/.functions` and `[ -f ~/.localrc ] && source ~/.localrc`.
 - herdr itself and its plugins are installed separately; only its `config.toml` lives here.
 - `macos.sh` (Finder and keyboard defaults) is run by hand if wanted.
 - `gitconfig` carries a personal name and email.
 - GitHub CLI login. `gitconfig` uses `gh auth git-credential` for HTTPS remotes on github.com, and agents open pull requests through `gh`, so run `gh auth login` once per machine. `gh` itself comes from the `Brewfile` on macOS and from the distro on Linux (below).
-- Secrets. `dsc` needs `DEEPSEEK_API_KEY` exported by a machine-local file (`~/.localrc` on macOS, `~/.bashrc` on Linux).
+- Secrets. `dsc` needs `DEEPSEEK_API_KEY` exported in `~/.localrc`.
 
 ## Linux prerequisites
 
