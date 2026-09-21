@@ -143,3 +143,21 @@ function review() {
 		tuicr -r "$@";
 	fi
 }
+
+# Claude Code against the DeepSeek API; the variables are set for that one process only
+function dsc() {
+	if [ -z "$DEEPSEEK_API_KEY" ]; then
+		echo "dsc: DEEPSEEK_API_KEY is not set, export it first" >&2;
+		return 1;
+	fi
+	ANTHROPIC_BASE_URL="https://api.deepseek.com/anthropic" \
+	ANTHROPIC_AUTH_TOKEN="$DEEPSEEK_API_KEY" \
+	ANTHROPIC_MODEL="deepseek-flash[1m]" \
+	ANTHROPIC_DEFAULT_OPUS_MODEL="deepseek-flash[1m]" \
+	ANTHROPIC_DEFAULT_SONNET_MODEL="deepseek-flash[1m]" \
+	ANTHROPIC_DEFAULT_HAIKU_MODEL="deepseek-flash" \
+	CLAUDE_CODE_SUBAGENT_MODEL="deepseek-flash" \
+	CLAUDE_CODE_EFFORT_LEVEL="max" \
+	CLAUDE_CODE_AUTO_COMPACT_WINDOW="786432" \
+	command claude "$@";
+}

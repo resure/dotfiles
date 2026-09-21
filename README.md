@@ -21,20 +21,24 @@ Not automated:
 - herdr itself and its plugins are installed separately; only its `config.toml` lives here.
 - `macos.sh` (Finder and keyboard defaults) is run by hand if wanted.
 - `gitconfig` carries a personal name and email.
+- GitHub CLI login. `gitconfig` uses `gh auth git-credential` for HTTPS remotes on github.com, and agents open pull requests through `gh`, so run `gh auth login` once per machine. `gh` itself comes from the `Brewfile` on macOS and from the distro on Linux (below).
+- Secrets. `dsc` needs `DEEPSEEK_API_KEY` exported by a machine-local file (`~/.localrc` on macOS, `~/.bashrc` on Linux).
 
 ## Linux prerequisites
 
 `install-cli-tools.sh` only fetches the review tools; the base packages come from the distro and need root once. Arch:
 
 ```sh
-sudo pacman -S --needed git curl tar gzip base-devel unzip nodejs npm
+sudo pacman -S --needed git curl tar gzip base-devel unzip nodejs npm github-cli
 ```
 
 Ubuntu:
 
 ```sh
-sudo apt install git curl tar gzip build-essential unzip nodejs npm
+sudo apt install git curl tar gzip build-essential unzip nodejs npm gh
 ```
+
+Ubuntu's own `gh` is old; the current one comes from the [cli.github.com apt repository](https://github.com/cli/cli/blob/trunk/docs/install_linux.md).
 
 `base-devel` / `build-essential` give the C compiler nvim-treesitter compiles parsers with; node is for the TypeScript language server Mason installs. herdr is installed by its own installer from [herdr.dev](https://herdr.dev).
 
@@ -57,6 +61,7 @@ sudo apt install git curl tar gzip build-essential unzip nodejs npm
 - `nvim`: browse the project (`<space>e` tree, `<space><space>` files, `<space>sg` grep, `<space>gg` lazygit). Pressing `<space>` and waiting shows every binding.
 - `review` (uncommitted changes) or `review master..HEAD` (a branch), a wrapper over `tuicr`: review an agent's diff like a pull request. `c` comments a line, `v` selects a range first, `C` comments the file, `y` copies the whole review as markdown to paste to the agent, `?` lists keys.
 - `lazygit`: stage hunks, commit, discard.
+- `dsc`: Claude Code pointed at the DeepSeek API; takes the same arguments as `claude` and leaves the calling shell's environment untouched.
 - `git diff`, `git show`, `git log -p` render through delta; `n`/`N` jump between files.
 
 ## Updating tools
