@@ -11,13 +11,14 @@ git clone git@github.com:resure/dotfiles.git ~/code/dotfiles
 
 `install.sh` is safe to run repeatedly. It:
 
-1. symlinks the configs listed below into `$HOME`; anything already present and not pointing into this repo is reported as `SKIPPED` and left alone, so resolve those by hand;
+1. symlinks the configs listed below into `$HOME`; anything already present and not pointing into this repo is reported as `SKIPPED` and left alone, so resolve those by hand; on Linux it also wires the shell startup into `~/.bashrc` (see below);
 2. runs `install-cli-tools.sh`: on macOS `brew bundle` with the `Brewfile` (CLI tools, casks and fonts of the laptop), on Linux x86_64 the review tools (nvim, lazygit, delta, tuicr, ripgrep, fd, fzf, tree-sitter) as pinned release binaries into `~/.local/bin` (no root needed);
 3. restores nvim plugins to the commits pinned in `nvim/lazy-lock.json` and waits for the treesitter parsers and Mason tools (stylua, shfmt) LazyVim installs on first start. Language servers (vtsls for TypeScript needs node) are installed by Mason on first use.
 
+Shell startup is the one place `install.sh` adds to a file it does not own. On macOS `zshrc` is just linked as `~/.zshrc` and puts Homebrew and `~/.local/bin` on `PATH` before sourcing `~/.aliases`, `~/.functions` and, if present, `~/.localrc` (machine-local: tokens, work aliases, version managers). On Linux the stock `~/.bashrc` stays where it is and a marked block is appended to it, creating the file if missing, doing the same wiring: `~/.local/bin` on `PATH`, then `~/.aliases`, `~/.functions` and `~/.localrc`. Each run rewrites only the lines between `# >>> dotfiles >>>` and `# <<< dotfiles <<<`, so keep your own edits to `~/.bashrc` outside the markers.
+
 Not automated:
 
-- Shell startup. On macOS `zshrc` is linked; it puts Homebrew and `~/.local/bin` on `PATH` and sources `~/.aliases`, `~/.functions` and, if present, `~/.localrc` (machine-local: tokens, work aliases, version managers). On Linux the stock `~/.bashrc` stays and needs the same wiring added by hand: `~/.local/bin` on `PATH`, `source ~/.aliases`, `source ~/.functions` and `[ -f ~/.localrc ] && source ~/.localrc`.
 - herdr itself and its plugins are installed separately; only its `config.toml` lives here.
 - `macos.sh` (Finder and keyboard defaults) is run by hand if wanted.
 - `gitconfig` carries a personal name and email.
